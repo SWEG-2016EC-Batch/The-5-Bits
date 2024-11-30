@@ -50,5 +50,6 @@
          8.3 Otherwise  Display "Status: Overweight".
 ### 9. End Loop
 ### 10. Stop
+
 #Flow Chart
-![image](https://github.com/user-attachments/assets/e4c3b943-773b-4c28-be03-1cb08804d1b0)
+
