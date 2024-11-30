@@ -9,7 +9,7 @@
 - calculate bonus_payment as weekly_working_hours * bonus_rate_per_hour
 - calculate gross_salary as base_salary + bonus_payment
 - calculate net_salary as gross_salary - (gross_salary * (0.05 + 0.15))
-- print gross_salary, net_salary and bonus_payment
+- print employee_name, gross_salary, net_salary and bonus_payment
 
 **Flowchart**:
 
@@ -22,7 +22,8 @@ flowchart TD
     input2 --> process[bonus_payment = weekly_working_hours * bonus_rate_per_hour]
     process --> process0[gross_salary = base_salary + bonus_payment]
     process0 --> process1["net_salary = gross_salary - (gross_salary * 0.20)"]
-    process1 --> print[/print gross_salary/]
+    process1 --> print2[/print employee_name/]
+    print2 --> print[/print gross_salary/]
     print --> print0[/print net_salary/]
     print0 --> print1[/print bonus_payment/]
     print1 --> stop([stop])
@@ -34,5 +35,5 @@ flowchart TD
 3. CALCULATE bonus_payment as weekly_working_hours * bonus_rate_per_hour
 4. CALCULATE gross_salary as base_salary + bonus_payment
 5. CALCULATE net_salary as gross_salary - (gross_salary * 0.20)
-6. PRINT gross_salary, net_salary and bonus_payment
+6. PRINT employee_name, gross_salary, net_salary and bonus_payment
 7. STOP
