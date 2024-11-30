@@ -23,3 +23,4 @@ Write a program to calculate the total number of miles an automobile can drive w
 7. Display: "The number of miles the automobile can be driven without refueling is: `tot_number_miles`
 8. Stop
 ## C) flow chart
+![image](https://github.com/user-attachments/assets/bfcf42d8-d961-4c1e-a8f3-1fe115c8f53a)
