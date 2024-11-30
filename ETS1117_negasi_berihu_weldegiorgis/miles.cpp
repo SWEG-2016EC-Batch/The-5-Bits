@@ -18,7 +18,7 @@ int main()
   cout<<"Please enter the capacity in gallons of an automobile fuel tank ";
   cin>>cap_in_gallons;
    
-  tot_number_miles=miles_per_gallons/cap_in_gallons;
+  tot_number_miles=miles_per_gallons * cap_in_gallons;
   
   cout<<"The number miles of the automobile cam be driven without refueling is  "<<tot_number_miles;
     return 0;
