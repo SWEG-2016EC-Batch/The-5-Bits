@@ -16,7 +16,8 @@
 ```mermaid
 flowchart TD
     start([start]) --> process["set result to 1"]
-    process --> input[/input x and y/]
+    process --> input0[/input x/]
+    input0 --> input[/input y/]
     input --> check{is x = 0 and y = 0}
     check -- yes --> print0[/print "Undefined"/]
     print0 --> stop
