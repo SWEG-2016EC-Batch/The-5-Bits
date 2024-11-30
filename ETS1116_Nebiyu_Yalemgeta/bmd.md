@@ -1,4 +1,4 @@
-```mermaid
+
 graph TD
     A[Start] --> B[Input height and weight]
     B --> C[Calculate BMI = weight / (height * height)]
@@ -10,4 +10,3 @@ graph TD
     E --> I[End]
     G --> I
     H --> I
-
