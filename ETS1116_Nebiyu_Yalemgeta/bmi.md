@@ -1,118 +1,74 @@
 **Problem Description**:  
-The program calculates the Body Mass Index (BMI) of a person based on their weight, height, age, and gender. The BMI is calculated using the formula:  
+The program calculates the Body Mass Index (BMI) for multiple people. For each person, the BMI is computed using the formula:  
 `BMI = weight / (height * height)`  
-The program determines if the person is underweight, normal weight, or overweight based on their BMI. It also adjusts the BMI categories based on the person's age and gender. The program works for multiple persons and continues until the user decides to stop.
+The program then categorizes the BMI into three groups: underweight, normal weight, and overweight. It repeats the calculation for the specified number of people.
 
 **Problem Analysis**:  
 
 *Input*:  
-- weight in kilograms (float)
-- height in meters (float)
-- age (integer)
-- gender ('M' or 'F' as a character)
+- Number of people to calculate BMI for (integer).  
+- For each person:
+  - Weight in kilograms (float).  
+  - Height in meters (float).  
 
 *Output*:  
-- Body Mass Index/BMI (float)
-- BMI category (underweight, normal weight, overweight) based on age and gender
+- BMI (float) for each person.  
+- BMI category (underweight, normal weight, or overweight).  
 
-*Process*:
-1. The user is prompted to input their weight, height, age, and gender.
-2. If any input is invalid (e.g., negative values or incorrect gender), the program will ask for a valid input until it receives one.
-3. The BMI is calculated using the formula: `BMI = weight / (height * height)`.
-4. The program then classifies the BMI into one of three categories:
-   - Underweight: BMI < 18.5
-   - Normal weight: BMI between 18.5 and 25 (inclusive)
-   - Overweight: BMI > 25
-5. Age and gender influence the BMI categories:
-   - For males and females under 20 years, different BMI thresholds are applied.
-   - For males and females between 20-40 years, different thresholds are used.
-   - For males and females above 40 years, a slightly higher BMI is considered normal.
-6. The program then asks if the user wants to calculate for another person. If they answer 'Y' or 'y', the program repeats; otherwise, it terminates.
+*Process*:  
+1. Ask the user for the number of people to calculate BMI for.  
+2. For each person:  
+   - Prompt the user to input weight and height.  
+   - Validate inputs to ensure they are positive.  
+   - Calculate BMI using the formula: `BMI = weight / (height * height)`.  
+   - Classify the BMI into:
+     - Underweight: BMI < 18.5.  
+     - Normal weight: BMI between 18.5 and 24.9 (inclusive).  
+     - Overweight: BMI >= 25.  
+   - Display the BMI and category.  
+3. Repeat until BMI is calculated for all people.  
+
+---
+
+**pseudocode**:  
+
+1. Start.  
+2. Ask the user for the number of people to calculate BMI for and store it in `numPersons`.  
+3. Loop from 1 to `numPersons` for each person:  
+   - Print the current person number.  
+   - Prompt the user to enter the weight and validate that it is positive.  
+   - Prompt the user to enter the height and validate that it is positive.  
+   - Calculate BMI as `BMI = weight / (height * height)`.  
+   - If BMI < 18.5, categorize as "Underweight".  
+   - Else if BMI is between 18.5 and 24.9 (inclusive), categorize as "Normal weight".  
+   - Else, categorize as "Overweight".  
+   - Display the BMI and the category.  
+4. End the loop after all persons have been processed.  
+5. Print a message indicating that all BMI calculations are complete.  
+6. Stop.  
+
+---
+
+**Flowchart**:  
 
 ```mermaid
 flowchart TD
-    start([start]) --> input_weight[/"Enter weight (kg)"/]
-    input_weight --> validate_weight{"Is weight > 0?"}
-    validate_weight -- no --> invalid_weight[/"Invalid input. Please enter a valid weight"/]
-    validate_weight -- yes --> input_height[/"Enter height (m)"/]
-    invalid_weight --> input_weight
-    input_height --> validate_height{"Is height > 0?"}
-    validate_height -- no --> invalid_height[/"Invalid input. Please enter a valid height"/]
-    validate_height -- yes --> input_age[/"Enter age"/]
-    invalid_height --> input_height
-    input_age --> validate_age{"Is age > 0?"}
-    validate_age -- no --> invalid_age[/"Invalid input. Please enter a valid age"/]
-    validate_age -- yes --> input_gender[/"Enter gender (M/F)"/]
-    invalid_age --> input_age
-    input_gender --> validate_gender{"Is gender M/F?"}
-    validate_gender -- no --> invalid_gender[/"Invalid input. Please enter 'M' or 'F'"/]
-    validate_gender -- yes --> process_bmi[/"BMI = weight / (height * height)"/]
-    invalid_gender --> input_gender
-    process_bmi --> print_bmi[/"Print BMI"/]
-    print_bmi --> check_bmi{"Is gender M/F?"}
-    check_bmi -- M --> male_age_check
-    check_bmi -- F --> female_age_check
+    start([Start]) --> inputNum[Input number of people to calculate BMI]
+    inputNum --> loopStart{Loop through each person}
+    loopStart -->|Yes| inputWeight[Input weight]
+    inputWeight --> validateWeight{Weight > 0?}
+    validateWeight -->|No| weightError[Invalid weight] --> inputWeight
+    validateWeight -->|Yes| inputHeight[Input height]
+    inputHeight --> validateHeight{Height > 0?}
+    validateHeight -->|No| heightError[Invalid height] --> inputHeight
+    validateHeight -->|Yes| calculateBMI[Calculate BMI = weight / (height * height)]
+    calculateBMI --> classifyBMI{Classify BMI}
+    classifyBMI -->|BMI < 18.5| underweight[Underweight]
+    classifyBMI -->|18.5 <= BMI <= 24.9| normal[Normal weight]
+    classifyBMI -->|BMI > 24.9| overweight[Overweight]
+    underweight --> nextPerson
+    normal --> nextPerson
+    overweight --> nextPerson
+    nextPerson --> loopStart
+    loopStart -->|No| end([End])
 
-    male_age_check --> check_age_male{"Is age < 20?"}
-    check_age_male -- yes --> bmi_underweight_male[/"BMI < 18.5, Underweight"/]
-    check_age_male -- no --> check_age_male_2{"Is age <= 40?"}
-    check_age_male_2 -- yes --> bmi_normal_male[/"BMI < 25, Normal weight"/]
-    check_age_male_2 -- no --> bmi_overweight_male[/"BMI >= 25, Overweight"/]
-    bmi_underweight_male & bmi_normal_male & bmi_overweight_male --> ask_continue_male
-
-    female_age_check --> check_age_female{"Is age < 20?"}
-    check_age_female -- yes --> bmi_underweight_female[/"BMI < 18.5, Underweight"/]
-    check_age_female -- no --> check_age_female_2{"Is age <= 40?"}
-    check_age_female_2 -- yes --> bmi_normal_female[/"BMI < 24, Normal weight"/]
-    check_age_female_2 -- no --> bmi_overweight_female[/"BMI >= 24, Overweight"/]
-    bmi_underweight_female & bmi_normal_female & bmi_overweight_female --> ask_continue_female
-
-    ask_continue_male --> ask_continue{"Do you want to continue?"}
-    ask_continue_female --> ask_continue
-    ask_continue -- yes --> input_weight
-    ask_continue -- no --> stop([stop])
-```
-**Pseudocode**:
-
-1. START
-2. REPEAT
-   1. READ the user's weight (kg)
-   2. WHILE weight <= 0, prompt for a valid weight
-   3. READ the user's height (m)
-   4. WHILE height <= 0, prompt for a valid height
-   5. READ the user's age
-   6. WHILE age <= 0, prompt for a valid age
-   7. READ the user's gender (M/F)
-   8. WHILE gender is not 'M' or 'F', prompt for a valid gender
-   9. CALCULATE BMI: BMI = weight / (height * height)
-   10. PRINT the BMI
-   11. IF gender is 'M' or 'm' THEN
-       1. IF age < 20 THEN
-           1. IF BMI < 18.5 THEN PRINT "Underweight"
-           2. ELSE IF BMI < 24.9 THEN PRINT "Normal weight"
-           3. ELSE PRINT "Overweight"
-       2. ELSE IF age <= 40 THEN
-           1. IF BMI < 18.5 THEN PRINT "Underweight"
-           2. ELSE IF BMI < 25 THEN PRINT "Normal weight"
-           3. ELSE PRINT "Overweight"
-       3. ELSE
-           1. IF BMI < 18.5 THEN PRINT "Underweight"
-           2. ELSE IF BMI < 26 THEN PRINT "Normal weight"
-           3. ELSE PRINT "Overweight"
-   12. ELSE IF gender is 'F' or 'f' THEN
-       1. IF age < 20 THEN
-           1. IF BMI < 18.5 THEN PRINT "Underweight"
-           2. ELSE IF BMI < 23.5 THEN PRINT "Normal weight"
-           3. ELSE PRINT "Overweight"
-       2. ELSE IF age <= 40 THEN
-           1. IF BMI < 18.5 THEN PRINT "Underweight"
-           2. ELSE IF BMI < 24 THEN PRINT "Normal weight"
-           3. ELSE PRINT "Overweight"
-       3. ELSE
-           1. IF BMI < 18.5 THEN PRINT "Underweight"
-           2. ELSE IF BMI < 25 THEN PRINT "Normal weight"
-           3. ELSE PRINT "Overweight"
-   13. ASK user if they want to calculate for another person (Y/N)
-   14. IF user enters 'Y' or 'y', repeat from step 1
-   15. IF user enters 'N' or 'n', STOP
-3. END
