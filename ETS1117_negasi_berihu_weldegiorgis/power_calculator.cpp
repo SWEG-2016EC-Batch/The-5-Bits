@@ -6,15 +6,15 @@ Write a program that find the result of the expression `x`^`y` where the value o
 using namespace std;
 
 int main() {
- float `x`, `y`, `result`;
+ float x, y, result;
 
    cout<<"please enter the base number ";
-   cin>>`x`;
+   cin>>x;
    cout<<"please enter the power number  ";
-   cin>>`y`;
+   cin>>y;
   
    result=pow(x,y);
-   cout<<"the value of "<< `x` <<" to the power of "<<`y` <<" is "<<result;
+   cout<<"the value of "<< x <<" to the power of "<<y <<" is "<<result;
  
  return 0;
 }
