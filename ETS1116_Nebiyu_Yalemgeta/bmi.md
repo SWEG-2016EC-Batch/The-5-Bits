@@ -1,3 +1,34 @@
+**Problem Description**:  
+The program calculates the Body Mass Index (BMI) of a person based on their weight, height, age, and gender. The BMI is calculated using the formula:  
+`BMI = weight / (height * height)`  
+The program determines if the person is underweight, normal weight, or overweight based on their BMI. It also adjusts the BMI categories based on the person's age and gender. The program works for multiple persons and continues until the user decides to stop.
+
+**Problem Analysis**:  
+
+*Input*:  
+- weight in kilograms (float)
+- height in meters (float)
+- age (integer)
+- gender ('M' or 'F' as a character)
+
+*Output*:  
+- Body Mass Index/BMI (float)
+- BMI category (underweight, normal weight, overweight) based on age and gender
+
+*Process*:
+1. The user is prompted to input their weight, height, age, and gender.
+2. If any input is invalid (e.g., negative values or incorrect gender), the program will ask for a valid input until it receives one.
+3. The BMI is calculated using the formula: `BMI = weight / (height * height)`.
+4. The program then classifies the BMI into one of three categories:
+   - Underweight: BMI < 18.5
+   - Normal weight: BMI between 18.5 and 25 (inclusive)
+   - Overweight: BMI > 25
+5. Age and gender influence the BMI categories:
+   - For males and females under 20 years, different BMI thresholds are applied.
+   - For males and females between 20-40 years, different thresholds are used.
+   - For males and females above 40 years, a slightly higher BMI is considered normal.
+6. The program then asks if the user wants to calculate for another person. If they answer 'Y' or 'y', the program repeats; otherwise, it terminates.
+
 ```mermaid
 flowchart TD
     start([start]) --> input_weight[/"Enter weight (kg)"/]
