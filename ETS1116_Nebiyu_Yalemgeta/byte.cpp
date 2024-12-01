@@ -1,35 +1,22 @@
 #include <iostream>
-#include <iomanip>  // For setting output formatting
-
 using namespace std;
 
 int main() {
-    int file_size, transfer_rate = 960;
-    int total_seconds, days, hours, minutes, seconds;
+    int file_size, sending_time_seconds, sending_time_days, sending_time_hours, sending_time_minutes;
 
-    // Display the program purpose
-    cout << "File Transfer Time Calculator" << endl;
-
-    // Input the file size in bytes
     cout << "Enter file size in bytes: ";
     cin >> file_size;
 
-    // Calculate total time in seconds
-    total_seconds = file_size / transfer_rate;
+    sending_time_seconds = file_size / 960;
+    sending_time_days = sending_time_seconds / 86400;
+    sending_time_seconds %= 86400;
+    sending_time_hours = sending_time_seconds / 3600;
+    sending_time_seconds %= 3600;
+    sending_time_minutes = sending_time_seconds / 60;
+    sending_time_seconds %= 60;
 
-    // Calculate days, hours, minutes, and seconds
-    days = total_seconds / 86400;
-    total_seconds %= 86400;  // Remaining seconds after days
-    hours = total_seconds / 3600;
-    total_seconds %= 3600;   // Remaining seconds after hours
-    minutes = total_seconds / 60;
-    seconds = total_seconds % 60;  // Remaining seconds after minutes
-
-    // Display the result
-    cout << "It will take " << days << " day(s), " 
-         << hours << " hour(s), " 
-         << minutes << " minute(s), and " 
-         << seconds << " second(s) to transfer this file." << endl;
+    cout << "It will take " << sending_time_days << " day(s), " << sending_time_hours
+         << " hour(s), " << sending_time_minutes << " minute(s), " << sending_time_seconds << " second(s)." << endl;
 
     return 0;
 }
