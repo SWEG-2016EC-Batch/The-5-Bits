@@ -8,6 +8,6 @@ int main (){
 	cin >> gallon;
 	cout << "Enter the miles per gallon of your automobile: ";
 	cin >> milepergallon;
-	mile = milepergallon / gallon;
+	mile = milepergallon * gallon;
 	cout << "The miles you can go: " << mile;
 }
