@@ -30,6 +30,31 @@ The program then categorizes the BMI into three groups: underweight, normal weig
 
 ---
 
+**Flowchart**:
+
+```mermaid
+flowchart TD
+    start([Start]) --> inputNum[Input number of people to calculate BMI]
+    inputNum --> loopStart{Loop through each person}
+    loopStart -->|Yes| inputWeight[Input weight]
+    inputWeight --> validateWeight{Weight > 0?}
+    validateWeight -->|No| weightError[Invalid weight] --> inputWeight
+    validateWeight -->|Yes| inputHeight[Input height]
+    inputHeight --> validateHeight{Height > 0?}
+    validateHeight -->|No| heightError[Invalid height] --> inputHeight
+    validateHeight -->|Yes| calculateBMI[Calculate BMI]
+    calculateBMI --> classifyBMI{Classify BMI}
+    classifyBMI -->|BMI < 18.5| underweight[Underweight]
+    classifyBMI -->|18.5 <= BMI <= 24.9| normal[Normal weight]
+    classifyBMI -->|BMI > 24.9| overweight[Overweight]
+    underweight --> nextPerson
+    normal --> nextPerson
+    overweight --> nextPerson
+    nextPerson --> loopStart
+    loopStart -->|No| finish([Finish])
+
+
+```
 **pseudocode**:  
 
 1. Start.  
@@ -48,27 +73,3 @@ The program then categorizes the BMI into three groups: underweight, normal weig
 6. Stop.  
 
 ---
-
-**Flowchart**:  
-
-```mermaid
-flowchart TD
-    start([Start]) --> inputNum[Input number of people to calculate BMI]
-    inputNum --> loopStart{Loop through each person}
-    loopStart -->|Yes| inputWeight[Input weight]
-    inputWeight --> validateWeight{Weight > 0?}
-    validateWeight -->|No| weightError[Invalid weight] --> inputWeight
-    validateWeight -->|Yes| inputHeight[Input height]
-    inputHeight --> validateHeight{Height > 0?}
-    validateHeight -->|No| heightError[Invalid height] --> inputHeight
-    validateHeight -->|Yes| calculateBMI[Calculate BMI = weight / (height * height)]
-    calculateBMI --> classifyBMI{Classify BMI}
-    classifyBMI -->|BMI < 18.5| underweight[Underweight]
-    classifyBMI -->|18.5 <= BMI <= 24.9| normal[Normal weight]
-    classifyBMI -->|BMI > 24.9| overweight[Overweight]
-    underweight --> nextPerson
-    normal --> nextPerson
-    overweight --> nextPerson
-    nextPerson --> loopStart
-    loopStart -->|No| end([End])
-
