@@ -28,4 +28,6 @@ Write a program that find the result of the expression x^y where the value of X 
 6. end.
 
 ## C) flow chart
+![image](https://github.com/user-attachments/assets/26e90283-c3aa-44e7-8c3d-3c03a08fe9b5)
+
 
