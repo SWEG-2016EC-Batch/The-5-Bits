@@ -2,128 +2,98 @@
 using namespace std;
 
 int main() {
-    char choice;
+    float weight, height, bmi;
+    int age;
+    char gender, continueInput;
 
     do {
-        float weight, height, bmi;
-        int age;
-        char gender;
-        int attempts;
-
-        // Input age with validation and retry limit
-        attempts = 0;
-        cout << "\nEnter your age (number only): ";
-        cin >> age;
-        while (cin.fail() || age <= 0) {
-            cin.clear();
-            cin.ignore(1000, '\n');
-            attempts++;
-            if (attempts >= 5) {
-                cout << "Too many invalid attempts! Exiting program.\n";
-                return 1;
-            }
-            cout << "Invalid input! Please enter a valid age: ";
-            cin >> age;
-        }
-
-        // Input gender with validation and retry limit
-        attempts = 0;
-        cout << "Enter your gender (M for Male, F for Female): ";
-        cin >> gender;
-        while (gender != 'M' && gender != 'm' && gender != 'F' && gender != 'f') {
-            attempts++;
-            if (attempts >= 5) {
-                cout << "Too many invalid attempts! Exiting program.\n";
-                return 1;
-            }
-            cout << "Invalid input! Please enter 'M' for Male or 'F' for Female: ";
-            cin >> gender;
-        }
-
-        // Input weight with validation and retry limit
-        attempts = 0;
-        cout << "Enter your weight (in kg): ";
-        cin >> weight;
-        while (cin.fail() || weight <= 0) {
-            cin.clear();
-            cin.ignore(1000, '\n');
-            attempts++;
-            if (attempts >= 5) {
-                cout << "Too many invalid attempts! Exiting program.\n";
-                return 1;
-            }
-            cout << "Invalid input! Please enter a valid weight: ";
+        // Weight input validation
+        while (true) {
+            cout << "Enter weight (kg): ";
             cin >> weight;
-        }
-
-        // Input height with validation and retry limit
-        attempts = 0;
-        cout << "Enter your height (in meters): ";
-        cin >> height;
-        while (cin.fail() || height <= 0) {
-            cin.clear();
-            cin.ignore(1000, '\n');
-            attempts++;
-            if (attempts >= 5) {
-                cout << "Too many invalid attempts! Exiting program.\n";
-                return 1;
+            if (!(cin >> weight) || weight <= 0) {
+                cout << "Invalid input. Please enter a positive number for weight.\n";
+                cin.clear();
+                cin.ignore(10000, '\n');
+            } else {
+                break;
             }
-            cout << "Invalid input! Please enter a valid height: ";
-            cin >> height;
         }
 
-        // Calculate BMI
-        bmi = weight / (height * height);
+        // Height input validation
+        while (true) {
+            cout << "Enter height (m): ";
+            if (!(cin >> height) || height <= 0) {
+                cout << "Invalid input. Please enter a positive number for height.\n";
+                cin.clear();
+                cin.ignore(10000, '\n');
+            } else {
+                break;
+            }
+        }
 
-        // Display BMI
+        // Age input validation
+        while (true) {
+            cout << "Enter age: ";
+            if (!(cin >> age) || age <= 0) {
+                cout << "Invalid input. Please enter a valid age.\n";
+                cin.clear();
+                cin.ignore(10000, '\n');
+            } else {
+                break;
+            }
+        }
+
+        // Gender input validation
+        while (true) {
+            cout << "Enter gender (M/F): ";
+            cin >> gender;
+            if (gender != 'M' && gender != 'F' && gender != 'm' && gender != 'f') {
+                cout << "Invalid gender input. Please enter 'M' or 'F'.\n";
+            } else {
+                break;
+            }
+        }
+
+        // BMI Calculation
+        bmi = weight / (height * height);
         cout << "Your BMI is: " << bmi << endl;
 
-        // Determine the weight category considering gender and age
-        if (age < 18) {
-            // For children and teens (under 18)
-            if (bmi < 18.5) {
-                cout << "You are underweight for your age." << endl;
-            } else if (bmi >= 18.5 && bmi <= 24.9) {
-                cout << "You are in the normal weight range for your age." << endl;
+        // Age and Gender adjusted categories
+        if (gender == 'M' || gender == 'm') {
+            if (age < 20) {
+                if (bmi < 18.5) cout << "Underweight\n";
+                else if (bmi < 24.9) cout << "Normal weight\n";
+                else cout << "Overweight\n";
+            } else if (age <= 40) {
+                if (bmi < 18.5) cout << "Underweight\n";
+                else if (bmi < 25) cout << "Normal weight\n";
+                else cout << "Overweight\n";
             } else {
-                cout << "You are overweight for your age." << endl;
+                if (bmi < 18.5) cout << "Underweight\n";
+                else if (bmi < 26) cout << "Normal weight\n";
+                else cout << "Overweight\n";
             }
-        } else if (gender == 'M' || gender == 'm') {
-            // For adult males
-            if (bmi < 20) {
-                cout << "You are underweight for a male." << endl;
-            } else if (bmi >= 20 && bmi <= 25) {
-                cout << "You are in the normal weight range for a male." << endl;
+        } else {  // Female
+            if (age < 20) {
+                if (bmi < 18.5) cout << "Underweight\n";
+                else if (bmi < 23.5) cout << "Normal weight\n";
+                else cout << "Overweight\n";
+            } else if (age <= 40) {
+                if (bmi < 18.5) cout << "Underweight\n";
+                else if (bmi < 24) cout << "Normal weight\n";
+                else cout << "Overweight\n";
             } else {
-                cout << "You are overweight for a male." << endl;
-            }
-        } else if (gender == 'F' || gender == 'f') {
-            // For adult females
-            if (bmi < 18) {
-                cout << "You are underweight for a female." << endl;
-            } else if (bmi >= 18 && bmi <= 24) {
-                cout << "You are in the normal weight range for a female." << endl;
-            } else {
-                cout << "You are overweight for a female." << endl;
+                if (bmi < 18.5) cout << "Underweight\n";
+                else if (bmi < 25) cout << "Normal weight\n";
+                else cout << "Overweight\n";
             }
         }
 
-        // Ask if the user wants to calculate BMI for another person
-        attempts = 0;
-        cout << "\nWould you like to calculate BMI for another person? (Y for Yes, N for No): ";
-        cin >> choice;
-        while (choice != 'Y' && choice != 'y' && choice != 'N' && choice != 'n') {
-            attempts++;
-            if (attempts >= 5) {
-                cout << "Too many invalid attempts! Exiting program.\n";
-                return 1;
-            }
-            cout << "Invalid input! Please enter 'Y' for Yes or 'N' for No: ";
-            cin >> choice;
-        }
+        // Ask if the user wants to continue
+        cout << "Do you want to calculate for another person? (Y/N): ";
+        cin >> continueInput;
+    } while (continueInput == 'Y' || continueInput == 'y');
 
-    } while (choice == 'Y' || choice == 'y');
-
-    cout << "Thank you for using the BMI calculator. Goodbye!" << endl;
     return 0;
 }
