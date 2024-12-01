@@ -43,3 +43,8 @@ flowchart TD
 9. CALCULATE sending_time_seconds as sending_time_seconds % 60
 10. PRINT sending_time_days, sending_time_hours, sending_time_minutes, and sending_time_seconds
 11. STOP
+
+**Tests**:  
+*Test 1*  
+input: a file size of 400MB (419,430,400 bytes)  
+output: it will take 5 days, 1 hour, 21 minutes, and 46 seconds to send the file
