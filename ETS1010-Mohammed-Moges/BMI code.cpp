@@ -4,17 +4,17 @@ using namespace std;
 	
 int main (){
 		
-	float weight, height, BMI,chance_weight , chance_height ;
+	float weight, height, BMI,trial_weight , trial_height ;
 		
       	string option ;
 		
 	do {
 		 
-	 chance_weight = 3;
+	 trial_weight = 3;
 		 
-	 chance_height = 3;
+	 trial_height = 3;
 		    
-       while (chance_weight > 0){
+       while (trial_weight > 0){
 			
 	
   		
@@ -28,11 +28,11 @@ int main (){
 
 	      	cin.ignore();
 	      		
-	      	chance_weight--;
+	      	trial_weight--;
 			
 	        cout << "Invalid input! you have left "<< chance_weight<<" chance"<<endl;
 	
-         	if(chance_weight == 0){
+         	if(trial_weight == 0){
          		
          	cout << "oops! You have have used all your chances to enter valid input, therefore the program has terminated."<<endl;
          		
@@ -47,7 +47,7 @@ int main (){
 			}
 	    }
 	    
-	    while(chance_height > 0) {
+	    while(trial_height > 0) {
 		
 		cout << "Enter the height in m :\n";
 			
@@ -59,12 +59,12 @@ int main (){
 				        
 		  cin.ignore();
 				        
-		  chance_height --;
+		  trial_height --;
 				
 		  cout << "Invalid input! you have left "<< chance_height<<"chance"<<endl;
 				        
 				      		        
-		  if(chance_height == 0){
+		  if(trial_height == 0){
 				        	
 	          cout << "oops! You have have used all your chances to enter valid input, therefore the program has terminated."<<endl;
 							
