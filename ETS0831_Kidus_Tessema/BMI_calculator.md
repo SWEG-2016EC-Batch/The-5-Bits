@@ -41,6 +41,6 @@ checking if person wants to check another BMI
 flowchart TD
 id1([start])
 id1 ==> id2[/input weight,height/]
-id2 ==> id3{shape: rect, label: "This is a process" }
+id2 ==> id3{"This is a process"}
 
 ```
