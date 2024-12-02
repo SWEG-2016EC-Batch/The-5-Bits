@@ -24,23 +24,22 @@ Design an algorithm and write a to read an employee name weekly working hours, b
 
 
 ### B)  pseudocode
-1. Start
-2. Input employee_name
-3. Input weekly_hours
-4. Input bonus_rate
-5. Input base_salary
+1. START
+2. READ fuel_tank_capacity and miles_per_gallon
+3. CALCULATE miles_per_tank as fuel_tank_capacity * miles_per_gallon
+4. PRINT miles_per_tank
+5. STOP
 
-6. Calculate bonus_payment = weekly_hours * bonus_rate
-7. Calculate gross_salary = base_salary + bonus_payment
-8. Calculate pension = 0.05 * gross_salary
-9. Calculate tax = 0.15 * gross_salary
-10. Calculate net_salary = gross_salary - (pension + tax)
-
-11. Output employee_name, gross_salary, bonus_payment, and net_salary
-12. End
 
 
 
 ## C) flow chart
 
+```mermaid
+flowchart TD
+    start([start]) --> input[/input fuel_tank_capacity and miles_per_gallon/]
+		input --> process["miles_per_tank = fuel_tank_capacity * miles_per_gallon"]
+		process --> print[/print miles_per_tank/]
+		print --> stop([stop])
+```
 
