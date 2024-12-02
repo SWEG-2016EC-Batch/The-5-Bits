@@ -23,17 +23,19 @@ This program calculates the result of raising a number `x` to the power of `y` (
 **Flowchart**:  
 
 ```mermaid
-flowchart TD
-    start([Start]) --> inputX[Enter value of x]
-    inputX --> validateX{Is x a valid number?}
-    validateX -->|No| errorX[Invalid input for x] --> inputX
-    validateX -->|Yes| inputY[Enter value of y]
-    inputY --> validateY{Is y a valid number?}
-    validateY -->|No| errorY[Invalid input for y] --> inputY
-    validateY -->|Yes| calculateResult[Calculate x^y]
-    calculateResult --> outputResult[Show result]
-    outputResult --> finish([Finish])
 
+flowchart TD
+    start([Start]) --> inputX[/Enter value of x/]
+    inputX --> validateX{Is x a valid number?}
+    validateX -->|No| errorX[/Invalid input for x/]
+    errorX --> inputX
+    validateX -->|Yes| inputY[/Enter value of y/]
+    inputY --> validateY{Is y a valid number?}
+    validateY -->|No| errorY[/Invalid input for y/]
+    errorY --> inputY
+    validateY -->|Yes| calculateResult[Calculate x^y]
+    calculateResult --> outputResult[/Show result/]
+    outputResult --> finish([Finish])
 
 ```
 
