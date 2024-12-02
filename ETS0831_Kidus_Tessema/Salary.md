@@ -28,7 +28,8 @@ Calculating employee's net salary as employee's gross-salary - (employee's gross
 
 ```mermaid
 flowchart TD
-id1([Start])
+id0([Start])
+id0 ==> id1[pension = 0.05 & tax = 0.15]
 id1 ==> id2[/Print "What is your name?"/]
 id2 ==> id3[/Input name_e/]
 id3 ==> id4[/Print "What is your base salary?"/]
