@@ -41,7 +41,7 @@ checking if person wants to check another BMI
 flowchart TD
 id1([start])
 id1 ==> id2[/input weight,height/]
-id2 ==>  id3(BMI = wieght)
+id2 ==>  id3((BMI = weight/(height * height)))
 id3 ==> id4a{BMI < 18.5}
 id4a == True ==> id5a[/print - "You are under-weight"/]
 id4a == False ==> id4b{BMI >= 18.5 & < 25}
