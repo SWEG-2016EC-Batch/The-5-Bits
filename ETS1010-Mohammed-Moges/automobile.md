@@ -5,11 +5,11 @@ program outputs the number of miles the automobile can be without refuling.
 
 ### **Problem analsis**
 
-Input   => capacity of fuel tank in gallon (cap_fuel), the miles per one gallon an automobile can be driven (mile_perGallon)
+**Input**   => capacity of fuel tank in gallon (cap_fuel), the miles per one gallon an automobile can be driven (mile_perGallon)
 
-Output  => the miles the automobile can driven be (num_miles)
+**Output**  => the miles the automobile can driven be (num_miles)
 
-Process => num_miles = cap_fuel * mile_perGallon  
+**Process** => num_miles = cap_fuel * mile_perGallon  
 
 ### **Pseudocode**
 
@@ -36,7 +36,7 @@ Step 6: calculate num_miles as num_miles = cap_fuel * mile_perGallon
 
 Step 7: print num_miles 
 
-Step 8: stop
+Step 8: end
 
 ### **FLOW CHART**
 
@@ -46,10 +46,11 @@ flowchart TD
     A([start]) --> B[Declare cap_fuel, mile_perGallon, num_miles ]
     B --> C[/Read cap_fuel/]
     C --> D{Is cap_fuel invalid input ?}
-    D -->|Yes| K
+    D -->|Yes| R[/Print "Invalid input!"/]
+    R --> K
     D --> |No| F[/Read mile_perGallon/]
     F --> G{Is mile_perGallon invalid input ?}
-    G -->|Yes| K
+    G -->|Yes| R
     G -->|No| I[num_miles = cap_fuel * mile_perGallon]
     I --> J[/Print num_miles/]
     J --> K([end])
