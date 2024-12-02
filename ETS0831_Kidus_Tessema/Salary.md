@@ -26,3 +26,7 @@ Calculating employee's net salary as employee's gross-salary - (employee's gross
 
 ### Flowchart
 
+```mermaid
+flowchart TD
+id1([Start])
+id1 ==> id2[/Print "What is your name?"/]
