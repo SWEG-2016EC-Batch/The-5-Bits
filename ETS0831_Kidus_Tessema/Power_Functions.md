@@ -11,6 +11,12 @@ Calculating result as x<sup>y</sup> <br>
 ### Pseduocode
 1. Start
 2. Accept x,y
-3. Calculate result = x<sup>y</sup>
-4. Print result
-5. Stop
+3. Check x = 0 & y = 0
+    <ol>
+      <li>If True, go to step 4</li>
+      <li>If False, go to step 5</li>
+    </ol>
+4. Print "Invalid"
+5. Calculate result = x<sup>y</sup>
+6. Print result
+7. Stop
