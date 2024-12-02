@@ -41,11 +41,12 @@ checking if person wants to check another BMI
 flowchart TD
 id1([start])
 id1 ==> id2[/input weight,height/]
-id2 ==>  id3(This is the text in the box)
-id3 ==> id4a{This is a process}
-id4a == True ==> id5a[/print "You are under-weight"/]
-
-
-
+id2 ==>  id3(BMI = wieght / (height * height))
+id3 ==> id4a{BMI < 18.5}
+id4a == True ==> id5a[/print - "You are under-weight"/]
+id4a == False ==> id4b{BMI >= 18.5 & < 25}
+id4b == True ==> id5b[/print - "You are normal-weight"/]
+id4b == False ==> id5c[/ print - "You are over-weight"/]
+id5a & id5b & id5c ==> id6[/print - "If you want to continue press y, if you want to stop press n]
 
 ```
