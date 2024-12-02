@@ -23,15 +23,18 @@ The program calculates how many miles a car can travel without refueling based o
 
 ```mermaid
 flowchart TD
-    start([Start]) --> inputTankCapacity[Input tank capacity in gallons]
+    start([Start]) --> inputTankCapacity[/Input tank capacity in gallons/]
     inputTankCapacity --> validateTankCapacity{Tank capacity > 0?}
-    validateTankCapacity -->|No| errorTankCapacity[Invalid capacity] --> inputTankCapacity
-    validateTankCapacity -->|Yes| inputMilesPerGallon[Input miles per gallon]
+    validateTankCapacity -->|No| errorTankCapacity[/Invalid capacity/]
+    errorTankCapacity --> inputTankCapacity
+    validateTankCapacity -->|Yes| inputMilesPerGallon[/Input miles per gallon/]
     inputMilesPerGallon --> validateMilesPerGallon{Miles per gallon > 0?}
-    validateMilesPerGallon -->|No| errorMilesPerGallon[Invalid miles per gallon] --> inputMilesPerGallon
+    validateMilesPerGallon -->|No| errorMilesPerGallon[/Invalid miles per gallon/]
+    errorMilesPerGallon --> inputMilesPerGallon
     validateMilesPerGallon -->|Yes| calculateTotalMiles[Calculate total miles]
-    calculateTotalMiles --> outputTotalMiles[Display total miles]
+    calculateTotalMiles --> outputTotalMiles[/Display total miles/]
     outputTotalMiles --> finish([Finish])
+
 
 
 ```
