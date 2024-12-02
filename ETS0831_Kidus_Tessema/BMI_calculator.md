@@ -13,16 +13,20 @@ Calculating BMI as (weight / (height * height))
 
 <h3>Pseudocode</h3>
 1. Start <br>
-2. Input Weight and Height <br>
+2. Accept Weight and Height <br>
 3. calculate BMI as "Weight / (Height * Height) <br>
 4. Check BMI <br>
-4.1 If BMI < 18.5, go to step 5 <br>
-4.2 If BMI >= 18.5 and BMI < 25, go to step 6 <br>
-4.3 If BMI >= 25, go to step 7 <br>
+    4.1 If BMI < 18.5, go to step 5 <br>
+    4.2 If BMI >= 18.5 and BMI < 25, go to step 6 <br>
+    4.3 If BMI >= 25, go to step 7 <br>
 5. Print "You are under-weight" <br>
 6. Print "You are normal-weight" <br>
 7. Print "You are over-weight" <br>
-8. 
+8. Print "If you like to continue, press 'y' and if you like to stop press 'n'" <br>
+9. Check user input <br>
+    9.1 If user input = y, go to step 1 <br>
+    9.2 If user input = n, go to step 10 <br>
+10. End <br>
 
 
 
