@@ -47,7 +47,7 @@ id4a == True ==> id5a[/print "You are under-weight"/]
 id4a == False ==> id4b{"BMI >= 18.5 and < 25"}
 id4b == True ==> id5b[/print "You are normal-weight"/]
 id4b == False ==> id5c[/print "You are over-weight"/]
-id4a & id4b ==> id5a & id5b & id5c ==> id6[/print "If you want to continue press 'y', if you want to stop press 'n']
+id4a & id4b ==> id5a & id5b & id5c ==> id6[/print If you want to continue press]
 id6 ==> id7 {"User input == 'y'}      
 id7 == True ==> id1
 check == False ==> id8([stop])
