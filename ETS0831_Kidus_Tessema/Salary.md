@@ -23,3 +23,6 @@ Calculating employee's net salary as employee's gross-salary - (employee's gross
 6. Calculate net = gross - (gross * (pension + tax))
 7. Print bonus_payment, gross, net
 8. Stop
+
+### Flowchart
+
