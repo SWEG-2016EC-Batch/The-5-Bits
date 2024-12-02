@@ -5,5 +5,5 @@ take days.
 
 ### Problem analysis
 **Input**: File size <br>
-**Output**: Time it takes to transfer the a file with the given file size. <br>
-**Procees**
+**Output**: Time it takes to transfer the a file with the given file size <br>
+**Procees**: 
