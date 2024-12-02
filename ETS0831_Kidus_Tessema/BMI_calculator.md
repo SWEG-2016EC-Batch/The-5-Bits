@@ -7,10 +7,13 @@ work for multiple person before terminated.
 <h3>Problem Analysis</h3>
 <strong>Input</strong> - Weight, Height <br>
 <strong>Output</strong> - BMI of a person<br>
-<strong>Process</strong>: <br>
+<strong>Process</strong> - <br>
 Accepting weight and height <br>
 Calculating BMI as (weight / (height * height))
 
+<h3>Pseudocode</h3>
+1. Start
+2. 
 
 
 
