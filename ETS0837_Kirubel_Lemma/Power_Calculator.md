@@ -38,19 +38,19 @@ flowchart TD
 2. SET result to 1
 3. READ x and y
 4. IF x = 0 and y = 0 THEN
-5. PRINT "Undefined"
-6. STOP
-7. ENDIF
-8. IF y > 0 THEN
-9. WHILE y > 0
-10. CALCULATE result as result * x
-11. CALCULATE y as y - 1
-12. ENDWHILE
-13. ELSE IF y < 0 THEN
-14. WHILE y < 0
-15. CALCULATE result as result * 1/x
-16. CALCULATE y as y + 1
-17. ENDWHILE
-18. ENDIF
-19. PRINT result
-20. STOP
+    1. PRINT "Undefined"
+    2. STOP
+5. ENDIF
+6. IF y > 0 THEN
+    1. WHILE y > 0
+        1. CALCULATE result as result * x
+        2. CALCULATE y as y - 1
+    2. ENDWHILE
+7. ELSE IF y < 0 THEN
+    1. WHILE y < 0
+        1. CALCULATE result as result * 1/x
+        2. CALCULATE y as y + 1
+    2. ENDWHILE
+8. ENDIF
+9. PRINT result
+10. STOP
