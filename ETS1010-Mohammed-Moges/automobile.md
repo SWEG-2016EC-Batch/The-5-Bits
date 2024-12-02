@@ -40,4 +40,17 @@ Step 8: stop
 
 ### **FLOW CHART**
 
-[![](https://mermaid.ink/img/pako:eNp1kl1LwzAUhv_KIVebdOy-oOJWNrahiHqjbRmH5nQL5KOkiSLr_rtpu0_F3CQ573POe_KxY4XhxGJWSvNVbNE6eEsyDWE8DNLahUA-hNHoDiZpQoVES1BgtS49yQiUkLSuyM5RSqMj0F6t21gNeV9j0qVO0_ELIT8ljg_qtFOT3aI-SSD0J0rBw1x5B_f7nkxasnmnuoHVRQSaJ9PA7FD-upujyawD563JNfCP1fyPVR9pnRbp-YS3555vflU-OC8652U6frZCu_PlHDtbdvpqkJLm-ZBFTJFVKHh4jV1LZMxtSVHG4rDkVKKXLmOZ3gcUvTOv37pgsbOeImaN32xZXKKsw85XHB0lAjcW1RGpUH8Yo04QceGMfeyfv_sF-x--xqjk?type=png)](https://mermaid.live/edit#pako:eNp1kl1LwzAUhv_KIVebdOy-oOJWNrahiHqjbRmH5nQL5KOkiSLr_rtpu0_F3CQ573POe_KxY4XhxGJWSvNVbNE6eEsyDWE8DNLahUA-hNHoDiZpQoVES1BgtS49yQiUkLSuyM5RSqMj0F6t21gNeV9j0qVO0_ELIT8ljg_qtFOT3aI-SSD0J0rBw1x5B_f7nkxasnmnuoHVRQSaJ9PA7FD-upujyawD563JNfCP1fyPVR9pnRbp-YS3555vflU-OC8652U6frZCu_PlHDtbdvpqkJLm-ZBFTJFVKHh4jV1LZMxtSVHG4rDkVKKXLmOZ3gcUvTOv37pgsbOeImaN32xZXKKsw85XHB0lAjcW1RGpUH8Yo04QceGMfeyfv_sF-x--xqjk)
+``` mermaid
+
+flowchart TD
+    A([start]) --> B[Declare cap_fuel, mile_perGallon, num_miles ]
+    B --> C[/Read cap_fuel/]
+    C --> D{Is cap_fuel invalid input ?}
+    D -->|Yes| K
+    D --> |No| F[/Read mile_perGallon/]
+    F --> G{Is mile_perGallon invalid input ?}
+    G -->|Yes| K
+    G -->|No| I[num_miles = cap_fuel * mile_perGallon]
+    I --> J[/Print num_miles/]
+    J --> K([end])
+```
