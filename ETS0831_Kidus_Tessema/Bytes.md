@@ -13,7 +13,8 @@ calculating time it takes to send file in days, hours and minutes <br>
 
 ### Pseduocode
 1. Start
-2. 
+2. Accept file size
+3. 
 
 
 
