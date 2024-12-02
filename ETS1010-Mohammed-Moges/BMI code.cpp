@@ -30,7 +30,7 @@ int main (){
 	      		
 	      	trial_weight--;
 			
-	        cout << "Invalid input! you have left "<< chance_weight<<" chance"<<endl;
+	        cout << "Invalid input! you have left "<< trial_weight<<" chance"<<endl;
 	
          	if(trial_weight == 0){
          		
@@ -61,7 +61,7 @@ int main (){
 				        
 		  trial_height --;
 				
-		  cout << "Invalid input! you have left "<< chance_height<<"chance"<<endl;
+		  cout << "Invalid input! you have left "<< trial_height<<"chance"<<endl;
 				        
 				      		        
 		  if(trial_height == 0){
