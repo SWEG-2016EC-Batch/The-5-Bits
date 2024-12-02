@@ -42,7 +42,9 @@ flowchart TD
 id1([start])
 id1 ==> id2[/input weight,height/]
 id2 ==>  id3(This is the text in the box)
-id3 ==> id4{This is a process}
+id3 ==> id4a{This is a process}
+id4a == True ==> id5a[/print "You are under-weight"/]
+
 
 
 
