@@ -30,3 +30,10 @@ Calculating employee's net salary as employee's gross-salary - (employee's gross
 flowchart TD
 id1([Start])
 id1 ==> id2[/Print "What is your name?"/]
+id2 ==> id3[/Input name_e/]
+id3 ==> id4[/Print "What is your base salary?"/]
+id4 ==> id5[/Input base/]
+id5 ==> id6[/Print "How many hours you work per week?"/]
+id6 ==> id7[/Input hours_per_week/]
+id7 ==> id8[/Print "Please enter you bonus rate per hour"/]
+id8 ==> id9[/Input bonus_rate/]
