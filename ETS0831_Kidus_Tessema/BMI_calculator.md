@@ -9,7 +9,7 @@ work for multiple person before terminated.
 <strong>Output</strong> - BMI of a person<br>
 <strong>Process</strong>: <br>
 Accepting weight and height <br>
-Calculating BMI as weight * (height)^2
+Calculating BMI as (weight / (height * height))
 
 
 
