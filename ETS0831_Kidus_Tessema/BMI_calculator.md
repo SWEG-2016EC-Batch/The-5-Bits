@@ -5,10 +5,10 @@ in normal weight, under weight or over weight. BMI is calculated as (BMI = w/h*h
 work for multiple person before terminated.
 
 <h3>Problem Analysis</h3>
-**Input** - Weight, Height
-**Output** - BMI of a person
-**Process** 
-Accepting weight and height
+**Input** - Weight, Height<br>
+**Output** - BMI of a person<br>
+**Process** <br>
+Accepting weight and height <br>
 Calculating BMI as weight * (height)^2
 ```mermaid
 flowchart TD
