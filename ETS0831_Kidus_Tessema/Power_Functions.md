@@ -26,7 +26,7 @@ Calculating result as x<sup>y</sup> <br>
 ```mermaid
 flowchart TD
 id1([Start])
-id1 ==> id2[/x,y/]
+id1 ==> id2[/input x,y/]
 id2 ==> id3{x == 0 & y == 0}
 id3 == True ==> id4a[/Print "Undefined"/]
 id3 == False ==> id4b["Result = x^y"]
