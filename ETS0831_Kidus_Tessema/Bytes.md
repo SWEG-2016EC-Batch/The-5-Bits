@@ -7,5 +7,12 @@ take days.
 **Input** - File size <br>
 **Output** - Time it takes to transfer the a file with the given file size <br>
 **Process** - <br>
-Accepting input file size
+Accepting input file size <br>
+Calculating time it takes to send file in seconds as file size / 960 <br>
+calculating time it takes to send file in days, hours and minutes <br>
+
+
+
+
+
 
