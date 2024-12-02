@@ -5,10 +5,13 @@ using namespace std;
 int main (){
 	int num;
 	float mass, height, BMI;
+	char i;
 	cout << "BMI Calculator" << endl;
+	do {
 	cout << "Enter the number people you want BMI done: ";
 	cin >> num;
-	while (num!=0){
+	
+	while (num!=0) {
 	cout << "Please input the person's mass (in kilogram): ";
 	cin >> mass;
 	cout << "Please input the person's height (in meter): " ;
@@ -20,6 +23,9 @@ int main (){
 		cout << "Your are normal-weight" << endl;
 	} else {
 		cout << "Your are over-weight" << endl;
-	} num--;
-}
+	} num--; }
+	} while (i = y) {
+		cout << "If you wish to continue press y, if not press n" << endl;
+		cin >> i;
+	}
 }
