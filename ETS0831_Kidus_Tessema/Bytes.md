@@ -31,8 +31,8 @@ id1([Start])
 id1 ==> id2[/Print "Please enter the size of your file in bytes"/]
 id2 ==> id3[/file size/]
 id3 ==> id4["time it takes to send file in seconds = file size / 960"]
-id4 ==> id5("time it takes to send file in days = time it takes to send file in seconds / 86400")
-
+id4 ==> id5["time it takes to send file in days = time it takes to send file in seconds / 86400"]
+id5 ==> id6["time it takes to send file in seconds = time it takes to send file in seconds % 86400"]
 
 
 
