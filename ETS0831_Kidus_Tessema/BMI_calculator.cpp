@@ -24,8 +24,8 @@ int main (){
 	} else {
 		cout << "Your are over-weight" << endl;
 	} num--; }
-	} while (i = y) {
-		cout << "If you wish to continue press y, if not press n" << endl;
-		cin >> i;
-	}
+	cout << "if you want to continue - press y" << endl;
+            cout << "if you want to stop - press n" << endl; 
+            cin >> i;
+    } while (i == 'y');
 }
