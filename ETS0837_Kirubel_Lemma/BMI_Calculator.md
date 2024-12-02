@@ -34,16 +34,16 @@ flowchart TD
 **Pseudocode**:  
 1. START
 2. REPEAT
-  1. READ weight and height
-  2. CALCULATE BMI as weight/(height * height)
-  3. PRINT BMI
-  4. IF BMI < 18.5 THEN
-     1. PRINT underweight
-  5. ELSE IF BMI >= 25 THEN
-     1. PRINT overweight
-  6. ELSE
-     1. PRINT normal weight
-  7. ENDIF
-  8. READ if the user wants the program to run again
+   1. READ weight and height
+   2. CALCULATE BMI as weight/(height * height)
+   3. PRINT BMI
+   4. IF BMI < 18.5 THEN
+      1. PRINT underweight
+   5. ELSE IF BMI >= 25 THEN
+      1. PRINT overweight
+   6. ELSE
+      1. PRINT normal weight
+   7. ENDIF
+   8. READ if the user wants the program to run again
 3. UNTIL the user does not want the program to run again
 4. STOP
