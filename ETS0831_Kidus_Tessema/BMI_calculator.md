@@ -50,6 +50,6 @@ id4b == False ==> id5c[/ print - "You are over-weight"/]
 id5a & id5b & id5c ==> id6[/print - "If you want to continue press y, if you want to stop press n/]
 id6 ==> id7{user input == y}
 id7 == True ==> id2
-id7 == False ==> id8 ([stop])
+id7 == False ==> id8([stop])
 
 ```
