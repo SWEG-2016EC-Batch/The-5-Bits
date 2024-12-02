@@ -36,8 +36,23 @@ Step 8:execute result =  pow(base,exponent)
   
 Step 9:print result 
 
-Step 10:stop 
+Step 10:end 
 
 ### **FLOW CHART**
-
-[![](https://mermaid.ink/img/pako:eNplkt9v0zAQx_-Vwy_bpE2B10qAtqVbuwEPMB7AKdI1vrQWybm6OBul7f-OYzehiDzF1uf7Q3feqdIZUhNV1e6lXKN4eMoLhvBdn-vWh4vFBVxdvYMbnVNZoxAgG7BsvcXa_iYQarvaw1t4s0jCm8jf6uwzoYEltklCvzaOiX12xG4jlu-ug-XS-fX_JLyG94cE5z28_0btfqqzr2yoskzm1eA1jV4fTljYf3J7uNvNW_BrSt5MK_T2OYX0t2NQJVh663jMu0sefSDc62zuz9qgAtvgyjLKFrhrliRpFh6Mo5bPPLw4-QldqCdhLFgfqaHl_WnLmBBLzvqSZEMhAVf9revk35LhHOdk-TlMvt_BpvNj41n02_aF5zqbirgxd36aOxtzH_S4uj7vxxB0VD1E1aPOEjWYPSazc01sFhfqUjUkDVoT3tCuJwoVSjdUqEn4DXvCoC1UwYeAYufdly2XauKlo0slrlut1aTCug2nbmPQU25xJdgMyAb5u3PNCJGx3snH9Gjj2z38AT7r4Zs?type=png)](https://mermaid.live/edit#pako:eNplkt9v0zAQx_-Vwy_bpE2B10qAtqVbuwEPMB7AKdI1vrQWybm6OBul7f-OYzehiDzF1uf7Q3feqdIZUhNV1e6lXKN4eMoLhvBdn-vWh4vFBVxdvYMbnVNZoxAgG7BsvcXa_iYQarvaw1t4s0jCm8jf6uwzoYEltklCvzaOiX12xG4jlu-ug-XS-fX_JLyG94cE5z28_0btfqqzr2yoskzm1eA1jV4fTljYf3J7uNvNW_BrSt5MK_T2OYX0t2NQJVh663jMu0sefSDc62zuz9qgAtvgyjLKFrhrliRpFh6Mo5bPPLw4-QldqCdhLFgfqaHl_WnLmBBLzvqSZEMhAVf9revk35LhHOdk-TlMvt_BpvNj41n02_aF5zqbirgxd36aOxtzH_S4uj7vxxB0VD1E1aPOEjWYPSazc01sFhfqUjUkDVoT3tCuJwoVSjdUqEn4DXvCoC1UwYeAYufdly2XauKlo0slrlut1aTCug2nbmPQU25xJdgMyAb5u3PNCJGx3snH9Gjj2z38AT7r4Zs)
+``` mermaid
+flowchart TD
+    A([start]) --> B[Declare and initialize result = 1]
+    B --> C[/Read base and exponent/]
+    C --> D{Are both base and exponent 0 ?}
+    D -->|Yes|E[/Print "Undefined!"/]
+    E --> L
+    D --> |No| F{Is the base negative and the exponent fraction ?}
+    F --> |Yes| G[/Print "It's an imaginary number and it doesn't work under real number"/]
+    G --> L
+    F -->|No| H{Is either of the base or the exponent or both invalid input ?}
+    H -->|yes| I[/Print "Error!"/]
+    I --> L
+    H -->|No| J[result = base^exponent]
+    J --> K[/Print result/]
+    K --> L([end])
+```
