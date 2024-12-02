@@ -42,7 +42,8 @@ Step 6: print days, hours, minutes and seconds
 Step 7:end
 
 ### **FLOW CHART**
-' ' ' mermaid
+
+```mermaid
 flowchart TD
     A([start]) --> B[/Read size/]
     B --> C{Is size < 0 or invalid input ?}
@@ -52,3 +53,4 @@ flowchart TD
     E --> K[change the total second in to days , hours, minutes and seconds]
     K --> F[/days, hours, minutes and seconds/]
     F --> G([end])
+```
