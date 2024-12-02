@@ -20,3 +20,16 @@ Calculating result as x<sup>y</sup> <br>
 5. Calculate result = x<sup>y</sup>
 6. Print result
 7. Stop
+
+### Flowchart
+
+```mermaid
+flowchart TD
+id1([Start])
+id1 ==> id2[/x,y/]
+id2 ==> id3{x == 0 & y == 0}
+id3 == True ==> id4a[/Print "Invalid"/]
+id3 == False ==> id4b["Result = x<sup>y</sup>"]
+id4b ==> id5[/Print result/]
+id5 & id4a ==> id6([Stop])
+```
