@@ -53,5 +53,31 @@
 
 # Flow Chart
 
-![image](https://github.com/user-attachments/assets/50a740ef-fc11-4acc-808f-4b8d1654025f)
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Read weight/]
+    B --> C{Weight = 0?}
+    C -->|Yes| D[stop]
+    C -->|No| E{Weight < 0?}
+    E -->|Yes| F[/"Weight must be greater than zero. Try again."/]
+    F --> B
+    E -->|No| G[/promt the user to enter height in meters/]
+    G --> H[/Read height/]
+    H --> I{Height <= 0?}
+    I -->|Yes| J[/"Height must be greater than zero. Try again."/]
+    J --> G
+    I -->|No| K[BMI = weight /height * height]
+    K --> L[/calculated BMI/]
+    L --> M{BMI < 18.5?}
+    M -->|Yes| N[/"Status: Underweight"/]
+    M -->|No| O{18.5 ≤ BMI ≤ 24.9?}
+    O -->|Yes| P[/"Status: Normal weight"/]
+    O -->|No| Q[/"Status: Overweight"/]
+    N --> R[continue the Loop]
+    P --> R
+    Q --> R
+    R --> B
+   
+
+
 
