@@ -42,6 +42,13 @@ Step 6: print days, hours, minutes and seconds
 Step 7:end
 
 ### **FLOW CHART**
-
-[![](https://mermaid.ink/img/pako:eNp9kU1vwjAMhv-KlxNIReU0adU-NChMCG2HscuW9mA1gUZqE5SPTYzy32dS2DgtUpTYfl7bifesMkKyjK0b81XVaD285YUGWo8D7jw5yiGMRvcw4emrRAFOfcu07JFJjEz3CxfdcAtjMBaU_sRGCTq3wcPDoYenEe7eZ6sOcp4uLqGrc8Y8Qk8Xiu7FdDDj3nhswMnKaOHgrq-Xws31-KScReWS0yP0RoKvaV9oqA7ZIHDnIIHaBOsSaJUOXjpAip9Sn7ItY7Y5T4-C__hz4_O-8QGXWpTDQrOEtdK2qAR97v7IFIx6amXBMroKucbQ-IIV-kAoBm9WO12xzNsgE2ZN2NQsW2PjyApbgV7mCjcW21_vFvWHMX-2FMob-9yPM0718AM9uJce?type=png)](https://mermaid.live/edit#pako:eNp9kU1vwjAMhv-KlxNIReU0adU-NChMCG2HscuW9mA1gUZqE5SPTYzy32dS2DgtUpTYfl7bifesMkKyjK0b81XVaD285YUGWo8D7jw5yiGMRvcw4emrRAFOfcu07JFJjEz3CxfdcAtjMBaU_sRGCTq3wcPDoYenEe7eZ6sOcp4uLqGrc8Y8Qk8Xiu7FdDDj3nhswMnKaOHgrq-Xws31-KScReWS0yP0RoKvaV9oqA7ZIHDnIIHaBOsSaJUOXjpAip9Sn7ItY7Y5T4-C__hz4_O-8QGXWpTDQrOEtdK2qAR97v7IFIx6amXBMroKucbQ-IIV-kAoBm9WO12xzNsgE2ZN2NQsW2PjyApbgV7mCjcW21_vFvWHMX-2FMob-9yPM0718AM9uJce)
-
+' ' ' mermaid
+flowchart TD
+    A([start]) --> B[/Read size/]
+    B --> C{Is size < 0 or invalid input ?}
+    C --> |YES| D[/Invalid input!/]
+    D --> G
+    C -->|No| E[total seconds = size / 960]
+    E --> K[change the total second in to days , hours, minutes and seconds]
+    K --> F[/days, hours, minutes and seconds/]
+    F --> G([end])
