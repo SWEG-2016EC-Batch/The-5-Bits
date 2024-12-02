@@ -29,15 +29,16 @@ calculating time it takes to send file in days, hours and minutes <br>
 flowchart TD
 id1([Start])
 id1 ==> id2[/Print "Please enter the size of your file in bytes"/]
-id2 ==> id3[/file size/]
-id3 ==> id4["time it takes to send file in seconds = file size / 960"]
-id4 ==> id5["time it takes to send file in days = time it takes to send file in seconds / 86400"]
-id5 ==> id6["time it takes to send file in seconds = time it takes to send file in seconds % 86400"]
-id6 ==> id7["time it takes to send file in hours = time it takes to send file in seconds / 3600"]
-id7 ==> id8["time it takes to send file in seconds = time it takes to send file in seconds % 3600"]
-id8 ==> id9["time it takes to send file in minutes = time it takes to send file in seconds / 60"]
-id9 ==> id10["time it takes to send file in seconds = time it takes to send file in seconds % 60"]
-id10 ==> id11[/Print "The amount of time that will take to send this file is", time it takes to send file in days, time it takes to send file in hours, time it takes to send file in minutes, time it takes to send file in seconds/]
+id2 ==> id3[/size/]
+id3 ==> id4["time_in_sec = file size / 960"]
+id4 ==> id5["time_in_day = time_in_sec / 86400"]
+id5 ==> id6["time_in_sec = time_in_sec % 86400"]
+id6 ==> id7["time_in_hour = time_in_sec / 3600"]
+id7 ==> id8["time_in_sec = time_in_sec % 3600"]
+id8 ==> id9["time_in_min = time_in_sec / 60"]
+id9 ==> id10["time_in_sec = time_in_sec % 60"]
+id10 ==> id11[/Print "The amount of time that will take to send this file is", time_in_day, time_in_hour, time_in_sec/]
+id11 ==> id12([Stop])
 
 
 
