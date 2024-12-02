@@ -11,6 +11,10 @@ Accepting input file size <br>
 Calculating time it takes to send file in seconds as file size / 960 <br>
 calculating time it takes to send file in days, hours and minutes <br>
 
+### Pseduocode
+1. Start
+2. 
+
 
 
 
