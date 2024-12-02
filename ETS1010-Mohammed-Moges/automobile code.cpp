@@ -39,7 +39,7 @@ cout << "The automobile can travel " << num_miles << " miles" <<endl;
 
 }
 
-}
+
 
 return 0;
 
