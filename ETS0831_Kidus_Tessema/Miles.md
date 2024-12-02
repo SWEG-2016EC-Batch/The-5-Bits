@@ -11,6 +11,13 @@ Accepting input fuel avaliable in gallon, miles per gallon of the automobile <br
 Calculating the miles a person can go as miles per gallon of the automobile * fuel avaliable in gallon <br>
 
 ### Pseduocode
-1. Start
-2. Print 
+1. Start <br>
+2. Accept fuel avaliable in gallon, miles per gallon of the automobile <br>
+3. Calculate The miles a person can go as "miles per gallon of the automobile * fuel avaliable in gallon" <br>
+4. Print The miles a person can go <br>
+5. End
+
+### Flowchart
+
+
 
