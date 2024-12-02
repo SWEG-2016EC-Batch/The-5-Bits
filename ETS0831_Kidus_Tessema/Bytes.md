@@ -30,7 +30,7 @@ flowchart TD
 id1([Start])
 id1 ==> id2[/Print "Please enter the size of your file in bytes"/]
 id2 ==> id3[/size/]
-id3 ==> id4["time_in_sec = file size / 960"]
+id3 ==> id4["time_in_sec = size / 960"]
 id4 ==> id5["time_in_day = time_in_sec / 86400"]
 id5 ==> id6["time_in_sec = time_in_sec % 86400"]
 id6 ==> id7["time_in_hour = time_in_sec / 3600"]
