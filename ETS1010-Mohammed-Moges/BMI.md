@@ -63,10 +63,10 @@ flowchart TD
     F -->|No| P[BMI = weight /height^2]
     P --> H[/ Print BMI/]
     H --> I{Is 0 < BMI < 18.5 ?}
-    I -->|Yes| J[/ Print Under weight/]
+    I -->|Yes| J[/ Print "Under weight"/]
     I -->|No| K{Is 18.5 <= BMI < 25 ?}
-    K -->|Yes| L[/Normal weight/]
-    K -->|No| M[/Over weight/]
+    K -->|Yes| L[/Print "Normal weight"/]
+    K -->|No| M[/Print "Over weight"/]
     L --> N([End])
     J --> N
     M --> N
