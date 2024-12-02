@@ -8,6 +8,10 @@ int main (){
 	cin >> x;
 	cout << "Enter the value of y: " << endl;
 	cin >> y;
+	if (x == 0 & y == 0) {
+		cout << "Invalid";
+	} else {
 	result = pow(x,y);
 	cout << "x the power of y is: " << result;
+	}
 }
