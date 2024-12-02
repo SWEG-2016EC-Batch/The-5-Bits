@@ -9,7 +9,7 @@ int main (){
 	cout << "Enter the value of y: " << endl;
 	cin >> y;
 	if (x == 0 & y == 0) {
-		cout << "Invalid";
+		cout << "Undefined";
 	} else {
 	result = pow(x,y);
 	cout << "x the power of y is: " << result;
