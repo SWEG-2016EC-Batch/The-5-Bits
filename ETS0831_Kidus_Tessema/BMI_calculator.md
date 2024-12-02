@@ -17,12 +17,10 @@ Calculating BMI as (weight / (height * height))
 3. calculate BMI as "Weight / (Height * Height) <br>
 4. Check BMI <br>
 <ol>
-      <li>Indented item</li>
-      <li>Indented item</li>
+      <li>If BMI < 18.5, go to step 5</li>
+      <li>If BMI >= 18.5 and BMI < 25, go to step 6</li>
+      <li>If BMI >= 25, go to step 7</li>
     </ol>
-    4.1 If BMI < 18.5, go to step 5 <br>
-    4.2 If BMI >= 18.5 and BMI < 25, go to step 6 <br>
-    4.3 If BMI >= 25, go to step 7 <br>
 5. Print "You are under-weight" <br>
 6. Print "You are normal-weight" <br>
 7. Print "You are over-weight" <br>
