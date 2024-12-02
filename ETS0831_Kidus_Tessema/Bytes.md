@@ -25,6 +25,11 @@ calculating time it takes to send file in days, hours and minutes <br>
 
 ### Flowchart
 
+```mermaid
+flowchart TD
+id1([Start])
+id1 ==> id2[/Print "Please enter the size of your file in bytes"/]
+id2 ==> id3[/file size/]
 
 
 
