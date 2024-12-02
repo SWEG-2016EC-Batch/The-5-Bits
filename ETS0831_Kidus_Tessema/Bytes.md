@@ -37,7 +37,7 @@ id6 ==> id7["time it takes to send file in hours = time it takes to send file in
 id7 ==> id8["time it takes to send file in seconds = time it takes to send file in seconds % 3600"]
 id8 ==> id9["time it takes to send file in minutes = time it takes to send file in seconds / 60"]
 id9 ==> id10["time it takes to send file in seconds = time it takes to send file in seconds % 60"]
-id10 ==> id11[/Print "The amount of time that will take to send this file is", time it takes to send file in days, time it takes to send file in hours, time it takes to send file in minutes, time it takes to send file in seconds]
+id10 ==> id11[/Print "The amount of time that will take to send this file is", time it takes to send file in days, time it takes to send file in hours, time it takes to send file in minutes, time it takes to send file in seconds/]
 
 
 
