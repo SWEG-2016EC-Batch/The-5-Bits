@@ -22,7 +22,7 @@ Calculating the miles a person can go as miles per gallon of the automobile * fu
 ```mermaid
 flowchart TD
 id1([Start])
-id1 ==> id2[/gallon, milepergallon/]
+id1 ==> id2[/input gallon, milepergallon/]
 id2 ==> id3["mile = milepergallon * gallon"]
 id3 ==> id4[/ print mile/]
 id4 ==> id5([Stop])
