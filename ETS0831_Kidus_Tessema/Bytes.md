@@ -37,9 +37,9 @@ id6 ==> id7["time_in_hour = time_in_sec / 3600"]
 id7 ==> id8["time_in_sec = time_in_sec % 3600"]
 id8 ==> id9["time_in_min = time_in_sec / 60"]
 id9 ==> id10["time_in_sec = time_in_sec % 60"]
-id10 ==> id11[/Print "The amount of time that will take to send this file is", time_in_day, time_in_hour, time_in_sec/]
+id10 ==> id11[/Print "The amount of time that will take to send this file is", time_in_day, time_in_hour, time_in_min,  time_in_sec/]
 id11 ==> id12([Stop])
-
+```
 
 
 
