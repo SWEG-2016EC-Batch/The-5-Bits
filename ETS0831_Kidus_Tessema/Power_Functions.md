@@ -3,7 +3,14 @@ Write a program that find the result of the expression x<sup>y</sup> where the v
 
 ### Problem analysis
 **Input** - x, y <br>
-**Output** - x<sup>y</sup> <br>
+**Output** - result <br>
 **Process** - <br>
 Accepting input x,y <br>
-Calculating x<sup>y</sup> as (x)^y <br>
+Calculating result as x<sup>y</sup> <br>
+
+### Pseduocode
+1. Start
+2. Accept x,y
+3. Calculate result = x<sup>y</sup>
+4. Print result
+5. Stop
