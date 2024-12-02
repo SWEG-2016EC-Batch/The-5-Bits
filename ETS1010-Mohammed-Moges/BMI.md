@@ -48,5 +48,26 @@ Step 9: print " normal weight "
          
 Step 10: stop
 ### *FLOW CHART*
-[![](https://mermaid.ink/img/pako:eNp9k1tvgjAYhv9K0ytNdDqTJYtRlyGoqKDZ4WIDljS2SjOgphTNov73tZRTsmRcFPr16fs9EHqBO4YJHMJ9xM67EHEB3kw_AfJ6bnmpkIWgDbrdCTC83gtBGJwJPYQC0AR8H3qBRo2cmF5oWi-fUESxvB8z8XTT2FRh1w-SXoGpWMEpigDbl5smoA9K1qxZo1lx2RW4zThVsAq3sHKLSzUrV5upduE_arO63fxiN9TCv2rzmrWaFXdTqc0qta1nODYYl6_Y03lfg0Jvm-stvB7YcpoIIOHSfJEv2cqmD0ZqRY73j3cPlYhdiyyrhPcEE160K6PsSmel4vKQ0biIHNSBqzpw7RV5LuOx_BQ6MGhyKs_xNLU5VU0LZp3ruy3PSnDQ1rWlrumJ05zUI-zAmMiWFMu_8qIqPhQhiYkPh_IRkz3KIuFDP7lJFGWCvf4kOzgUPCMdyFl2COFwj6JUzrIjRoKYFB04ikvkiJJPxuIKIpgKxh19DPLTcPsFzSbrLg?type=png)](https://mermaid.live/edit#pako:eNp9k1tvgjAYhv9K0ytNdDqTJYtRlyGoqKDZ4WIDljS2SjOgphTNov73tZRTsmRcFPr16fs9EHqBO4YJHMJ9xM67EHEB3kw_AfJ6bnmpkIWgDbrdCTC83gtBGJwJPYQC0AR8H3qBRo2cmF5oWi-fUESxvB8z8XTT2FRh1w-SXoGpWMEpigDbl5smoA9K1qxZo1lx2RW4zThVsAq3sHKLSzUrV5upduE_arO63fxiN9TCv2rzmrWaFXdTqc0qta1nODYYl6_Y03lfg0Jvm-stvB7YcpoIIOHSfJEv2cqmD0ZqRY73j3cPlYhdiyyrhPcEE160K6PsSmel4vKQ0biIHNSBqzpw7RV5LuOx_BQ6MGhyKs_xNLU5VU0LZp3ruy3PSnDQ1rWlrumJ05zUI-zAmMiWFMu_8qIqPhQhiYkPh_IRkz3KIuFDP7lJFGWCvf4kOzgUPCMdyFl2COFwj6JUzrIjRoKYFB04ikvkiJJPxuIKIpgKxh19DPLTcPsFzSbrLg)
-
+``` mermaid
+flowchart TD
+    A([start]) --> B[Read weight in kg]
+    B --> C{is weight invalid input?}
+    C -->|Yes| D{is trial of weight > 0 ?}
+    D -->|Yes| B
+    D -->|No| N
+    C -->|No| E[/Read height in m/]
+    E --> F{is height invalid input?}
+    F -->|Yes| G{Is trial of height > 0 ?}
+    G -->|Yes| E
+    G -->|NO| N
+    F -->|No| P[BMI = weight /height^2]
+    P --> H[/ Print BMI/]
+    H --> I{Is 0 < BMI < 18.5 ?}
+    I -->|Yes| J[/ Print Under weight/]
+    I -->|No| K{Is 18.5 <= BMI < 25 ?}
+    K -->|Yes| L[/Normal weight/]
+    K -->|No| M[/Over weight/]
+    L --> N([End])
+    J --> N
+    M --> N
+```
