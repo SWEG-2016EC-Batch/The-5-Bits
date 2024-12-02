@@ -9,7 +9,9 @@ work for multiple person before terminated.
 <strong>Output</strong> - BMI of a person<br>
 <strong>Process</strong> - <br>
 Accepting weight and height <br>
-Calculating BMI as (weight / (height * height))
+Calculating BMI as (weight / (height * height)) <br>
+checking the value of BMI to see if the person is over-weight, under-weight or normal-weight <br>
+checking if person wants to check another BMI
 
 <h3>Pseudocode</h3>
 1. Start <br>
@@ -30,8 +32,6 @@ Calculating BMI as (weight / (height * height))
       <li>If user input = y, go to step 1</li>
       <li>If user input = n, go to step 10</li>
     </ol>
-            9.1  <br>
-    9.2 If user input = n, go to step 10 <br>
 10. End <br>
 
 
