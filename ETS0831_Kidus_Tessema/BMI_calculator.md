@@ -34,8 +34,7 @@ checking if person wants to check another BMI
     </ol>
 10. End <br>
 
-
-
+<h3>Flowchart</h3>
 
 ```mermaid
 flowchart TD
