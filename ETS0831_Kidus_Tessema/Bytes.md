@@ -12,9 +12,12 @@ Calculating time it takes to send file in seconds as file size / 960 <br>
 calculating time it takes to send file in days, hours and minutes <br>
 
 ### Pseduocode
-1. Start
-2. Accept file size
-3. 
+1. Start <br>
+2. Accept file size <br>
+3. Calculate time it takes to send file in seconds as "file size / 960" <br>
+4. Calculate time it takes to send file in days as "time it takes to send file in seconds / 86400" <br>
+5. Calculate time it takes to send file in seconds as "time it takes to send file in seconds % 86400" <br>
+6. Calculate time it takes to send file in hours as "time it takes to send file in seconds / 3600" <br>
 
 
 
