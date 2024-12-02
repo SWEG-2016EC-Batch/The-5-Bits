@@ -3,7 +3,7 @@
 using namespace std;
 
 int main () {
-  double hours_per_week, bonus, base, bonus_payment, gross, net;
+  double hours_per_week, bonus_rate, base, bonus_payment, gross, net;
   string name_e;
   const float pension = 0.05;
   const float tax = 0.15;
@@ -14,9 +14,9 @@ int main () {
   cout << "How many hours you work per week?" << endl;
   cin >> hours_per_week;
   cout << "Please enter you bonus rate per hour" << endl;
-  cin >> bonus;
+  cin >> bonus_rate;
 
-  bonus_payment = hours_per_week * bonus;
+  bonus_payment = hours_per_week * bonus_rate;
   gross = base + bonus_payment;
   net = gross - (gross * (pension + tax));
   
