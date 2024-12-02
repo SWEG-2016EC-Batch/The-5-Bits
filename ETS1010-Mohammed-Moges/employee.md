@@ -82,5 +82,25 @@ Step 18:end
 
 ### **FLOW CHART**
 
-[![](https://mermaid.ink/img/pako:eNqVlE1z2jAQhv_KVqckNUPPTD-miUlCZ5pD20uxGc8WL-CJLXkkOcQD_PcIfWAbcqkvltbPvnqlXWvHliInNmGrUmyXG5Qa_sQpB_N8v0qUNoHFNYxGX-E2iWlZoiTYEj2XbbYV8rng62wjI_gneKMyiZrcFBVlCg3dRkBVXYqWKONYUQRrKYQ6feSkT2MnUmNbEdcR1MRVIXgEGl_9rOZ2DRuyo4WzemsdzpPxL8J8uODYI3OL3HnkYgsBu7NYvJupSwY-wycQEgr-gmWRm3fdaPh2cJnxMXP_l9R-moxnfeRDEJ9a8R89HvZPYg_33tXgFEPSveXgYVeoIfC-He_mwakf7cC0J2TXe0wGRw1f3tnrzXlNnUi_eiZvqPNxUHiXEMp4hLuPRt7HfUE9bOp6AYZaB6hrGYMaP-rkZxRERybHH9-jPYhZMj5rw_9r4s7DwPZZx_bNdP1r27czHeo6c81wlRDPF9cuxiJWkaywyM0fuTvGUqY3VFHKJmaY0wqbUqcs5QeDYqPF75Yv2UTLhiImRbPesMkKS2VmTZ0bi3GBa4lVQGrkcyGqE0R5oYX86a4AexMc3gCpq2Dp?type=png)](https://mermaid.live/edit#pako:eNqVlE1z2jAQhv_KVqckNUPPTD-miUlCZ5pD20uxGc8WL-CJLXkkOcQD_PcIfWAbcqkvltbPvnqlXWvHliInNmGrUmyXG5Qa_sQpB_N8v0qUNoHFNYxGX-E2iWlZoiTYEj2XbbYV8rng62wjI_gneKMyiZrcFBVlCg3dRkBVXYqWKONYUQRrKYQ6feSkT2MnUmNbEdcR1MRVIXgEGl_9rOZ2DRuyo4WzemsdzpPxL8J8uODYI3OL3HnkYgsBu7NYvJupSwY-wycQEgr-gmWRm3fdaPh2cJnxMXP_l9R-moxnfeRDEJ9a8R89HvZPYg_33tXgFEPSveXgYVeoIfC-He_mwakf7cC0J2TXe0wGRw1f3tnrzXlNnUi_eiZvqPNxUHiXEMp4hLuPRt7HfUE9bOp6AYZaB6hrGYMaP-rkZxRERybHH9-jPYhZMj5rw_9r4s7DwPZZx_bNdP1r27czHeo6c81wlRDPF9cuxiJWkaywyM0fuTvGUqY3VFHKJmaY0wqbUqcs5QeDYqPF75Yv2UTLhiImRbPesMkKS2VmTZ0bi3GBa4lVQGrkcyGqE0R5oYX86a4AexMc3gCpq2Dp)
+``` mermaid
+flowchart TD
+    A([start]) --> B[Declare weekly_working_hr, bonus_rate_hr, base_salary, employee_name, groos_salary, net_salary, bonus_payment, pension, tax, pensipn_rate, tax_rate]
+    B --> Z[/Read employee_name/]
+    Z --> C[/Read weekly_working_hr/]
+    C --> D{Is weekly_working_hr < 0 or invalid input ?}
+    D -->|Yes|E[/Print "Invalid input!"/]
+    E --> J
+    D --> |No| F[/Read bonus_rate_hr/]
+    F -->  G{is bonus_rate_hr < 0 or other invalid input }
+    G --> |Yes| E
+    F -->|No| H[bonus_payment = weekly_working_hr * bonus_rate_hr, 
+    groos_salary = bonus_payment + base_salary,
+     pension = base_salary * pension_rate, 
+     tax = base_salary * tax_rate, 
+    net_salary = gross_salary - pension-tax]
+    H --> I[/Print
+employee_name, weekly_working_hr, bonus_rate_hr, base_salary,tax_rate, pension_rate,bonus_payment, gross_salary, pension,tax, net_salary/]
+    I --> J([end])
+    
+```
 
