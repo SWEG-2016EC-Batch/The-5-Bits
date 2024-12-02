@@ -30,21 +30,25 @@ This program calculates the salary details of an employee. It asks for the emplo
 
 ```mermaid
 flowchart TD
-    start([Start]) --> inputName[Enter employee name]
-    inputName --> inputHours[Enter weekly working hours]
+    start([Start]) --> inputName[/Enter employee name/]
+    inputName --> inputHours[/Enter weekly working hours/]
     inputHours --> validateHours{Is working hours > 0?}
-    validateHours -->|No| errorHours[Invalid hours. Re-enter hours.] --> inputHours
-    validateHours -->|Yes| inputBonus[Enter bonus rate per hour]
+    validateHours -->|No| errorHours[/Invalid hours. Re-enter hours./]
+    errorHours --> inputHours
+    validateHours -->|Yes| inputBonus[/Enter bonus rate per hour/]
     inputBonus --> validateBonus{Is bonus rate > 0?}
-    validateBonus -->|No| errorBonus[Invalid bonus rate. Re-enter rate.] --> inputBonus
-    validateBonus -->|Yes| inputSalary[Enter base salary]
+    validateBonus -->|No| errorBonus[/Invalid bonus rate. Re-enter rate./]
+    errorBonus --> inputBonus
+    validateBonus -->|Yes| inputSalary[/Enter base salary/]
     inputSalary --> validateSalary{Is base salary > 0?}
-    validateSalary -->|No| errorSalary[Invalid salary. Re-enter salary.] --> inputSalary
+    validateSalary -->|No| errorSalary[/Invalid salary. Re-enter salary./]
+    errorSalary --> inputSalary
     validateSalary -->|Yes| calculateBonus[Calculate bonusPayment = workingHours * bonusRate]
     calculateBonus --> calculateGross[Calculate grossSalary = baseSalary + bonusPayment]
     calculateGross --> calculateNet[Calculate netSalary]
-    calculateNet --> displayResults[Display results]
-    displayResults --> finish([Finish])
+    calculateNet --> displayResult[/Display employee name and net salary/]
+    displayResult --> finish([Finish])
+
 
 
 ```
