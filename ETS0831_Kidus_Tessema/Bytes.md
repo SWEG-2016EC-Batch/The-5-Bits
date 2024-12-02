@@ -4,6 +4,8 @@ it will take to send a file, given the file size. Test your program on a 400MB (
 take days.
 
 ### Problem analysis
-**Input**: File size <br>
-**Output**: Time it takes to transfer the a file with the given file size <br>
-**Procees**: 
+**Input** - File size <br>
+**Output** - Time it takes to transfer the a file with the given file size <br>
+**Process** - <br>
+Accepting input file size
+
