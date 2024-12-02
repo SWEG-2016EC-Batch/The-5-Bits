@@ -28,7 +28,7 @@ flowchart TD
 id1([Start])
 id1 ==> id2[/x,y/]
 id2 ==> id3{x == 0 & y == 0}
-id3 == True ==> id4a[/Print "Invalid"/]
+id3 == True ==> id4a[/Print "Undefined"/]
 id3 == False ==> id4b["Result = x^y"]
 id4b ==> id5[/Print result/]
 id5 & id4a ==> id6([Stop])
