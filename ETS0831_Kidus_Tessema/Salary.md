@@ -21,7 +21,7 @@ Calculating employee's net salary as employee's gross-salary - (employee's gross
 4. Calculate bonus_payment = hours_per_week * bonus_rate
 5. Calculate gross = base + bonus_payment
 6. Calculate net = gross - (gross * (pension + tax))
-7. Print bonus_payment, gross, net
+7. Print name_e, bonus_payment, gross, net
 8. Stop
 
 ### Flowchart
@@ -37,3 +37,8 @@ id5 ==> id6[/Print "How many hours you work per week?"/]
 id6 ==> id7[/Input hours_per_week/]
 id7 ==> id8[/Print "Please enter you bonus rate per hour"/]
 id8 ==> id9[/Input bonus_rate/]
+id9 ==> id10["bonus_payment = hours_per_week * bonus_rate"]
+id10 ==> id11["gross = base + bonus_payment"]
+id11 ==>  id12["net = gross - (gross * (pension + tax))"]
+id12 ==> id13[/Print name_e, bonus_payment, gross, net]
+id13 ==> id14([Stop])
