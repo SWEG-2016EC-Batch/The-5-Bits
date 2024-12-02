@@ -40,5 +40,5 @@ id8 ==> id9[/Input bonus_rate/]
 id9 ==> id10["bonus_payment = hours_per_week * bonus_rate"]
 id10 ==> id11["gross = base + bonus_payment"]
 id11 ==>  id12["net = gross - (gross * (pension + tax))"]
-id12 ==> id13[/Print name_e, bonus_payment, gross, net]
+id12 ==> id13[/Print name_e, bonus_payment, gross, net/]
 id13 ==> id14([Stop])
