@@ -12,17 +12,17 @@ prompts the user to enter an over-time bonus rate/hour.
 
 **Process** = calculate the following:
 
-               > bonus payment = worked hour * bonus rate
+> bonus payment = worked hour * bonus rate
 
-               > overtime payment = worked hour * overtime rate
+> overtime payment = worked hour * overtime rate
 
-              > gross salary = base salary + bonus payment + over time payment
+> gross salary = base salary + bonus payment + over time payment
 
-              > pension = gross salary * 0.07
+> pension = gross salary * 0.07
 
-              > tax = gross salary * tax rate
+> tax = gross salary * tax rate
 
-              > net salary = gross salary - pension - tax
+> net salary = gross salary - pension - tax
             
 
 ## ***FLOW CHART***
