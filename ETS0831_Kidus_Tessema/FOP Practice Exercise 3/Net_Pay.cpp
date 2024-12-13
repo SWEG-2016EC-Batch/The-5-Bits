@@ -41,7 +41,7 @@ int main () {
 
     gross_salary = basic_salary + bouns;
     pension = basic_salary * pension_rate;
-    income_tax = (gross_salary / basic_salary) * income_tax_rate;
+    income_tax = gross_salary * income_tax_rate;
     net_salary = gross_salary - (pension + income_tax);
 
     cout << "Your net salary is: " << net_salary;
