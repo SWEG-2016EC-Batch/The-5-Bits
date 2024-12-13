@@ -7,7 +7,7 @@ This program prints different patterns based on a given dimension `n`. The patte
 - **Output**:
   - Prints 12 different patterns to the console.
 
-### Process:
+### psudocode:
 1. Start.
 2. **Pattern 1**: Number Pattern (1 to `n` in rows)
    - For each row `i` from `1` to `n`:
