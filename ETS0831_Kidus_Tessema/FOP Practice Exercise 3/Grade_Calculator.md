@@ -16,5 +16,7 @@ calculating sum of these results <br>
 checking the value of GPA by checking where the sum reside with in a range of numbers <br>
 
 <h3>Pseudocode</h3>
-1. start
-2. 
+1. start <br>
+2. Accept test_total, quiz_total, assignment_total, project_total, final_total <br>
+3. Accpet test_result, quiz_result, assignment_result, project_result, final_result <br>
+4. Calculate test_result
