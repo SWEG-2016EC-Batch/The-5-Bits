@@ -15,7 +15,7 @@ Checking value of working hours to see if it exceeds 40 hours and whether there 
 Calculating - <br>
 gross_salary as gross_salary = basic_salary + bouns <br>
 pension as pension = basic_salary * pension_rate <br>
-income_tax as income_tax = (gross_salary / basic_salary) * income_tax_rate <br>
+income_tax as income_tax = gross_salary * income_tax_rate <br>
 net_salary as net_salary = gross_salary - (pension + income_tax) <br>
 
 <h3>Pseudocode</h3>
