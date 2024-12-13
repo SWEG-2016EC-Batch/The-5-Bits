@@ -34,30 +34,6 @@ This program calculates the final grade of a student based on various scores (te
      - `F` for total mark < 30
   8. Display the total mark and the grade to the user.
   9. Stop.
-```mermaid
-graph TD
-    A[Start] --> B[Enter Test Score]
-    B --> C[Enter Quiz Score]
-    C --> D[Enter Project Score]
-    D --> E[Enter Assignment Score]
-    E --> F[Enter Final Exam Score]
-    F --> G[Calculate Total Mark]
-    G --> H{Is Total Mark >= 90?}
-    H -- Yes --> I['A+']
-    H -- No --> J{Is Total Mark >= 80?}
-    J -- Yes --> K['A']
-    J -- No --> L{Is Total Mark >= 75?}
-    L -- Yes --> M['B+']
-    L -- No --> N{Is Total Mark >= 60?}
-    N -- Yes --> O['B']
-    N -- No --> P{Is Total Mark >= 55?}
-    P -- Yes --> Q['C+']
-    P -- No --> R{Is Total Mark >= 45?}
-    R -- Yes --> S['C']
-    R -- No --> T{Is Total Mark >= 30?}
-    T -- Yes --> U['D']
-    T -- No --> V['F']
-    V --> X[End]
 
 ### Pseudocode:
 1. Start.
