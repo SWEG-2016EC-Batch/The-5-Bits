@@ -25,18 +25,32 @@ prompts the user to enter an over-time bonus rate/hour.*
     * net payment = gross sallary -tax deduction- pension deduction;
 
 ## Pseudocode 
-1. START
-3. Accept bonus rate,basic salary, worked hours, overtime_bonus_rate.
-2. Initialize gross salary to basic salley, pension_rate = 0.07.
-3. proceed each of the following calculations.
-    * Pension Deduction= basic salary * pension;
-    * bonus=basic salary * bones rate;
-    * extra hours=worked_hrs-40;
-    * overtime bonus= overtime bonus rate * extra hours;
-    * gross sallary = basic salary + bonus+ overtime bonus;
-    * tax deduction= gross sallary * taxrate;
-    * net payment = gross sallary -tax deduction- pension deduction;
-4.  END
+
+1. **Start**
+
+3. **Initialize** `pension` to 0.07
+4. **Prompt the user** to enter the `basic_salary` and  **Read** `basic_salary`
+6. **Set** `gross_salary` to `basic_salary`
+7. **Calculate** `pension_deduction` as `basic_salary * pension`
+8. **Prompt the user** to enter the `bonus_rate` and  **Read** `bonus_rate`
+10. **Prompt the user** to enter the `worked_hours` and  **Read** `worked_hours`
+12. **If** `worked_hours > 40`:
+    1. **Prompt the user** to enter the `overtime_bonus_rate` and  **Read** `overtime_bonus_rate`
+    3. **Calculate** `extra_hours` as `worked_hours - 40`
+    4. **Add** `overtime_bonus_rate * extra_hours` to `gross_salary`
+13. **Add** `basic_salary * bonus_rate` to `gross_salary`
+14. **Determine** `tax_rate` based on `gross_salary`:
+    - If `gross_salary <= 200`: `tax_rate` = 0
+    - Else if `gross_salary <= 600`: `tax_rate` = 0.1
+    - Else if `gross_salary <= 1200`: `tax_rate` = 0.15
+    - Else if `gross_salary <= 2000`: `tax_rate` = 0.2
+    - Else if `gross_salary <= 3500`: `tax_rate` = 0.25
+    - Else: `tax_rate` = 0.3
+15. **Calculate** `tax_deduction` as `gross_salary * tax_rate`
+16. **Calculate** `net_pay` as `gross_salary - tax_deduction - pension_deduction`
+17. **Display** the `gross_salary`, `pension_deduction`, `tax_deduction`, and `net_pay`
+18. **End**
+
 
 
 
