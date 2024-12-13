@@ -50,6 +50,43 @@ prompts the user to enter an over-time bonus rate/hour.*
 16. **Calculate** `net_pay` as `gross_salary - tax_deduction - pension_deduction`
 17. **Display** the `gross_salary`, `pension_deduction`, `tax_deduction`, and `net_pay`
 18. **End**
+## flow chart
+``` mermaid
+graph TD
+    A([Start]) --> B[pension = 0.07]
+    B --> C[/ basic salary/]
+    C --> D[ gross_salary = basic salary]
+    D --> E[ pension_deduction = basic salary * pension]
+    E --> F[/ bonus_rate/]
+    F --> G[/ worked_hours/]
+    G --> H{If worked_hours > 40?}
+    H -- Yes --> I[/ overtime_bonus_rate/]
+    I --> J[ extra_hours = worked_hours - 40]
+    J --> K[Add overtime_bonus_rate * extra_hours to gross_salary]
+    H -- No --> L[ add basic salary * bonus_rate to gross_salary]
+    K --> L
+    L --> M{Determine tax_rate based on gross_salary}
+    M --> N{gross_salary <= 200?}
+    N -- Yes --> O[tax_rate = 0]
+    N -- No --> P{gross_salary <= 600?}
+    P -- Yes --> Q[tax_rate = 0.1]
+    P -- No --> R{gross_salary <= 1200?}
+    R -- Yes --> S[tax_rate = 0.15]
+    R -- No --> T{gross_salary <= 2000?}
+    T -- Yes --> U[tax_rate = 0.2]
+    T -- No --> V{gross_salary <= 3500?}
+    V -- Yes --> W[tax_rate = 0.25]
+    V -- No --> X[tax_rate = 0.3]
+    O --> Y[ tax_deduction = gross_salary * tax_rate]
+    Q --> Y
+    S --> Y
+    U --> Y
+    W --> Y
+    X --> Y
+    Y --> Z[ net_pay = gross_salary - tax_deduction - pension_deduction]
+    Z --> AA[/ the gross_salary, pension_deduction, tax_deduction, and net_pay/]
+    AA --> AB([End])
+
 
 
 
