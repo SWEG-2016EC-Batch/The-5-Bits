@@ -14,28 +14,48 @@ Checking value of choice to know what character is wanted to be checked <br>
 1. Start <br>
 2. Declare Variables <br>
 number: integer to store the user input number <br>
-num[10]: array to store various intermediate values for different operations <br>
-choice: integer to store the user's choice of operation. <br>
-reverse: integer to store the reversed number. <br>
-digits: integer to count the number of digits in the number. <br>
-product: integer to store the product of even digits. <br>
-last, first: integers to store the first and last digits of the number. <br>
-sum: integer to store the sum of the first and last digits. <br>
-last_swap, first_swap: integers to store the swapped first and last digits. <br>
-swap_in: integer to store the middle part of the number during the swap. <br>
-power: integer to keep track of place value during the swap operation. <br>
-reverse_pal: integer to store the reversed number for palindrome check. <br>
-digit_freq[10]: array to store the frequency of each digit from 0 to 9. <br>
-digit_num: integer to store the current digit for frequency calculation. <br>
-digit_round: integer to iterate over digit frequencies for printing. <br>
-factorial_num[20]: array to store the digits of the number for factorial calculation. <br>
-place: integer to track the position of digits for factorial calculation. <br>
-sum_factorial: integer to store the sum of factorials. <br>
-num_factorial: integer to store the factorial of a digit. <br>
-perfect: integer to store the sum of divisors for the perfect number check. <br>
-Display Welcome and Instructions <br>
 
-3. Print: "Welcome". <br>
+num[10]: array to store various intermediate values for different operations <br>
+
+choice: integer to store the user's choice of operation. <br>
+
+reverse: integer to store the reversed number. <br>
+
+digits: integer to count the number of digits in the number. <br>
+
+product: integer to store the product of even digits. <br>
+
+last, first: integers to store the first and last digits of the number. <br>
+
+sum: integer to store the sum of the first and last digits. <br>
+
+last_swap, first_swap: integers to store the swapped first and last digits. <br>
+
+swap_in: integer to store the middle part of the number during the swap. <br>
+
+power: integer to keep track of place value during the swap operation. <br>
+
+reverse_pal: integer to store the reversed number for palindrome check. <br>
+
+digit_freq[10]: array to store the frequency of each digit from 0 to 9. <br>
+
+digit_num: integer to store the current digit for frequency calculation. <br>
+
+digit_round: integer to iterate over digit frequencies for printing. <br>
+
+factorial_num[20]: array to store the digits of the number for factorial calculation. <br>
+
+place: integer to track the position of digits for factorial calculation. <br>
+
+sum_factorial: integer to store the sum of factorials. <br>
+
+num_factorial: integer to store the factorial of a digit. <br>
+
+perfect: integer to store the sum of divisors for the perfect number check. <br>
+
+
+3. Display Welcome and Instructions <br>
+Print: "Welcome". <br>
 Print: "Please enter your number". <br>
 Input number. <br>
 Display Operation Choices <br>
