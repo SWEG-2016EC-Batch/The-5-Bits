@@ -1,8 +1,6 @@
 <h2>Grade Calculator</h2>
 <h3>Problem</h3>
-Develop a program that find the Net-Pay of an employee after deduction of pension (7%) and tax based on tax rate provided. The
-program should read the basic salary, worked hours, and bonus rate. If the employee worked hours exceed 40 hrs., the program
-prompts the user to enter an over-time bonus rate/hour.
+Write a program that read the various assessments, compute the total mark and print the corresponding letter-grade based on the following scales.
 
 <h3>Problem Analysis</h3>
 <strong>Input</strong> - <br>
