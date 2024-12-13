@@ -17,7 +17,7 @@
 > net salary = gross salary - pension - tax
 
 **Problem Analysis**:  
-*Input*: basic_salary (float), worked_hours (float), bonus_rate (float) 
+*Input*: basic_salary (float), worked_hours (float), bonus_rate (float)  
 *Output*: net_salary (float), gross_salary (float), bonus(float), pension (flaot), tax (float)  
 *Process*:
 - input basic_salary and worked_hours
