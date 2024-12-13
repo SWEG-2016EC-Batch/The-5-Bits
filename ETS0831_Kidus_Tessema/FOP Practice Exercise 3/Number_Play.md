@@ -13,6 +13,7 @@ Checking value of choice to know what character is wanted to be checked <br>
 <h3>Pseudocode</h3>
 1. Start <br>
 2. Declare Variables <br>
+
 number: integer to store the user input number <br>
 
 num[10]: array to store various intermediate values for different operations <br>
