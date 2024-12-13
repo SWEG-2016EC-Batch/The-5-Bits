@@ -1,136 +1,140 @@
-<h2>Number Checker With Menu</h2>
-<h3>Problem</h3>
-Write a program that accepts an integer from the user and perform the following. Once you complete solving all the exercises compile it and prepare a menu.
-
+<h2>Pattern generator</h2>
 <h3>Problem Analysis</h3>
 <strong>Input</strong> - <br>
-number & choice <br>
-<strong>Output</strong> - Number's character depending on character to check was chosen<br>
+hieght & width <br>
+<strong>Output</strong> - pattern in that dimension<br>
 <strong>Process</strong> - <br>
 Accepting inputs <br>
-Checking value of choice to know what character is wanted to be checked <br>
-Start
-Declare Variables
-row: integer to represent the current row.
-column: integer to represent the current column.
-character: char initialized to 'A', used for character patterns.
-height: integer to store the height of the patterns.
-width: integer to store the width of the patterns.
-Display Welcome Message
+printing patterns by the given dimensions<br>
+<h3>Pseudocode</h3>
+1. Start <br>
+2. Declare Variables <br>
 
-Print: "Welcome".
-Print: "Please enter the height".
-Input height.
-Print: "Please enter the width".
-Input width.
-Generate Patterns
+row: integer to represent the current row. <br>
 
-Pattern 1 (Numbers in a grid)
+column: integer to represent the current column. <br>
 
-Print "1st pattern".
-For row from 1 to height:
-For column from 1 to width:
-Print the value of column followed by a space.
-Print a newline after each row.
-Pattern 2 (Alphabet in a grid)
+character: char initialized to 'A', used for character patterns. <br>
 
-Print "2nd pattern".
-Set character = 'A'.
-For row from 1 to height:
-For column from 1 to width:
-Print character followed by a space.
-Increment character.
-Print a newline after each row.
-Pattern 3 (Increasing numbers by row)
+height: integer to store the height of the patterns. <br>
 
-Print "3rd pattern".
-For row from 1 to height:
-For column from 1 to row:
-Print column followed by a space.
-Print a newline after each row.
-Pattern 4 (Descending numbers in reverse)
+width: integer to store the width of the patterns. <br>
 
-Print "4th pattern".
-For row from 1 to height:
-For column from 1 to height - row:
-Print two spaces for indentation.
-For i from row to 1:
-Print i followed by a space.
-Print a newline after each row.
-Pattern 5 (Alphabet in a triangular pattern, reset after each row)
+3. Display Welcome Message <br>
+Print: "Welcome". <br>
+Print: "Please enter the height". <br>
+Input height. <br>
+Print: "Please enter the width". <br>
+Input width. <br>
+Generate Patterns <br>
 
-Print "5th pattern".
-Set character = 'A'.
-For row from 1 to height:
-For column from 1 to row:
-Print character followed by a space.
-Increment character.
-Reset character = 'A' after each row.
-Print a newline after each row.
-Pattern 6 (Cyclic lowercase alphabets)
+4. Pattern 1 (Numbers in a grid) <br>
 
-Print "6th pattern".
-Set character = 'a'.
-For row from 1 to height:
-For column from 1 to width:
-Print character followed by a space.
-Increment character.
-If character > 'e', reset character = 'a'.
-Print a newline after each row.
-Pattern 7 (Hollow rectangle with stars on the border)
+Print "1st pattern". <br>
+For row from 1 to height: <br>
+For column from 1 to width: <br>
+Print the value of column followed by a space. <br>
+Print a newline after each row. <br>
+Pattern 2 (Alphabet in a grid) <br>
 
-Print "7th pattern".
-For row from 1 to height:
-For column from 1 to width:
-If row == 1 or row == height, print "* ".
-Else if column == 1 or column == width, print "* ".
-Otherwise, print spaces for inner hollow part.
-Print a newline after each row.
-Pattern 8 (Inverted triangle of stars)
+5. Print "2nd pattern". <br>
+Set character = 'A'. <br>
+For row from 1 to height: <br>
+For column from 1 to width: <br>
+Print character followed by a space. <br>
+Increment character. <br>
+Print a newline after each row. <br>
+Pattern 3 (Increasing numbers by row) <br>
 
-Print "8th pattern".
-For row from height down to 1:
-For column from 1 to row:
-Print "* ".
-Print a newline after each row.
-Pattern 9 (Inverted hollow triangle of stars)
+6. Print "3rd pattern". <br>
+For row from 1 to height: <br>
+For column from 1 to row: <br>
+Print column followed by a space. <br>
+Print a newline after each row. <br>
+Pattern 4 (Descending numbers in reverse) <br>
 
-Print "9th pattern".
-For row from height down to 1:
-For column from 1 to row:
-If column == 1 or column == row, print "* ".
-Else if row == height, print "* ".
-Otherwise, print spaces for the hollow part.
-Print a newline after each row.
-Pattern 10 (Pyramid with alternating stars and spaces)
+7. Print "4th pattern". <br>
+For row from 1 to height: <br>
+For column from 1 to height - row: <br>
+Print two spaces for indentation. <br>
+For i from row to 1: <br>
+Print i followed by a space. <br>
+Print a newline after each row. <br>
+Pattern 5 (Alphabet in a triangular pattern, reset after each row) <br>
 
-Print "10th pattern".
-For row from 1 to height:
-For column from 1 to height - row:
-Print two spaces for indentation.
-For i from 1 to (row * 2 - 1):
-If i is odd, print "* ".
-Otherwise, print spaces.
-Print a newline after each row.
-Pattern 11 (Inverted pyramid with alternating stars and spaces)
+8. Print "5th pattern". <br>
+Set character = 'A'. <br>
+For row from 1 to height: <br>
+For column from 1 to row: <br>
+Print character followed by a space. <br>
+Increment character. <br>
+Reset character = 'A' after each row. <br>
+Print a newline after each row. <br>
+Pattern 6 (Cyclic lowercase alphabets) <br>
 
-Print "11th pattern".
-For row from height down to 1:
-For column from 1 to height - row:
-Print two spaces for indentation.
-For i from 1 to (row * 2 - 1):
-If i is odd, print "* ".
-Otherwise, print spaces.
-Print a newline after each row.
-Pattern 12 (Inverted pyramid with stars only at the borders)
+9. Print "6th pattern". <br>
+Set character = 'a'. <br>
+For row from 1 to height: <br>
+For column from 1 to width: <br>
+Print character followed by a space. <br>
+Increment character. <br>
+If character > 'e', reset character = 'a'. <br>
+Print a newline after each row. <br>
+Pattern 7 (Hollow rectangle with stars on the border) <br>
 
-Print "12th pattern".
-For row from 1 to height:
-For column from 1 to height - row:
-Print two spaces for indentation.
-For i from 1 to (row * 2 - 1):
-If i == 1 or i == (row * 2 - 1), print "* ".
-Else if row == height, print "* ".
-Otherwise, print spaces for inner part.
-Print a newline after each row.
-End
+10.Print "7th pattern". <br>
+For row from 1 to height: <br>
+For column from 1 to width: <br>
+If row == 1 or row == height, print "* ". <br>
+Else if column == 1 or column == width, print "* ". <br>
+Otherwise, print spaces for inner hollow part. <br>
+Print a newline after each row. <br>
+Pattern 8 (Inverted triangle of stars) <br>
+
+11. Print "8th pattern". <br>
+For row from height down to 1: <br>
+For column from 1 to row: <br>
+Print "* ". <br>
+Print a newline after each row. <br>
+Pattern 9 (Inverted hollow triangle of stars) <br>
+
+12. Print "9th pattern". <br>
+For row from height down to 1: <br>
+For column from 1 to row: <br>
+If column == 1 or column == row, print "* ". <br>
+Else if row == height, print "* ". <br>
+Otherwise, print spaces for the hollow part. <br>
+Print a newline after each row. <br>
+Pattern 10 (Pyramid with alternating stars and spaces) <br>
+
+13. Print "10th pattern". <br>
+For row from 1 to height: <br>
+For column from 1 to height - row: <br>
+Print two spaces for indentation. <br>
+For i from 1 to (row * 2 - 1): <br>
+If i is odd, print "* ". <br>
+Otherwise, print spaces. <br>
+Print a newline after each row. <br>
+Pattern 11 (Inverted pyramid with alternating stars and spaces) <br>
+
+14. Print "11th pattern". <br>
+For row from height down to 1: <br>
+For column from 1 to height - row: <br>
+Print two spaces for indentation. <br>
+For i from 1 to (row * 2 - 1): <br>
+If i is odd, print "* ". <br>
+Otherwise, print spaces. <br>
+Print a newline after each row. <br>
+Pattern 12 (Inverted pyramid with stars only at the borders) <br>
+
+15. Print "12th pattern". <br>
+For row from 1 to height: <br>
+For column from 1 to height - row: <br>
+Print two spaces for indentation. <br>
+For i from 1 to (row * 2 - 1): <br>
+If i == 1 or i == (row * 2 - 1), print "* ". <br>
+Else if row == height, print "* ". <br>
+Otherwise, print spaces for inner part. <br>
+Print a newline after each row. <br>
+
+16. End <br>
