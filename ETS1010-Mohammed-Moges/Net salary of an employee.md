@@ -1,8 +1,7 @@
 ## **Problem description**
 
 Develop a program that find the Net-Pay of an employee after deduction of pension (7%) and tax based on tax rate provided.
-The program should read the basic salary, worked hours, and bonus rate. If the employee worked hours exceed 40 hrs., the program
-prompts the user to enter an over-time bonus rate/hour.
+The program should read the basic salary, worked hours, and bonus rate. If the employee worked hours exceed 40 hrs., the program prompts the user to enter an over-time bonus rate/hour.
 
 ## **problem analysis**
 
@@ -23,6 +22,15 @@ prompts the user to enter an over-time bonus rate/hour.
 > tax = gross salary * tax rate
 
 > net salary = gross salary - pension - tax
+
+**Tax Rate Range**:  
+> Up to 200Br:    0%  
+> 200Br-600Br:    10%  
+> 600Br-1200Br:   15%  
+> 1200Br-2000Br:  20%  
+> 2000Br-3500Br:  25%  
+> 3500Br & above: 30%
+
             
 
 ## ***FLOW CHART***
