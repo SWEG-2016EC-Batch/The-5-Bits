@@ -1,6 +1,10 @@
+#include<iostream>
+#include <cmath>
+using namespace std;
 int main() {
     int choice;
-     do {
+while(true)  { 
+    
         cout << "\nMenu:" << endl;
         cout << "1. Reverse the number" << endl;
         cout << "2. Count the number of digits" << endl;
@@ -12,127 +16,141 @@ int main() {
         cout << "8. Check if the number is a strong number" << endl;
         cout << "9. Check if the number is a perfect number" << endl;
         cout << "10. Exit" << endl;
+        
         cout << "Enter your choice: ";
         cin >> choice;
+        
+        if(choice==10)
+          break;
     
     
-	int number, reverse = 0, i = 0, product = 1;
+	int number,factorial, firstnumber, reverse = 0, i = 0, product = 1;
 	cout << "Enter the integer: ";
 	cin >> number;
-	int firstnumber, lastDigit = number % 10;
-	int digitFrequency[10] = {0};
-
-	int originalNumber = number;
-	int factorial;
-	int sum = 0;
+	
+	int lastDigit = number % 10, digitFrequency[10] = {0},sum = 0, originalNumber = number;
+	
 
 	while (number != 0) {
 		int digit = number % 10;
 
-		// Calculating factorial for each digit
-		factorial = 1;  // Reset factorial for each digit
+		factorial = 1;  
 		for (int k = 1; k <= digit; k++) {
 			factorial *= k;
-		}
-		sum += factorial;
+		    }
+		    sum += factorial;
 
-		// Product of even digits
-		if (digit % 2 == 0) {
-			product *= digit;
-		}
+	     	if (digit % 2 == 0) {
+		    	product *= digit;
+	           }
 
-		// Reverse the number
-		reverse = reverse * 10 + digit;
+		    reverse = reverse * 10 + digit;
 
-		// First digit
-		firstnumber = digit;
+	    	firstnumber = digit;
 
-		// Frequency of digits
-		digitFrequency[digit]++;
+		    digitFrequency[digit]++;
 
-		number /= 10;
-		i++;
-	}
+	    	number /= 10;
+	    	i++;
+    	}
 
 	int swappednumber, middle_number;
 	middle_number = originalNumber - ((firstnumber * pow(10, (i - 1))) + lastDigit);
 	swappednumber = lastDigit * pow(10, (i - 1)) + middle_number + firstnumber;
 
 switch(choice) {
+    
 // a- Reverse
 	
 	case 1:
 	     cout << "The reverse of " << originalNumber << " is: " << reverse << endl;
          break;
          
-	// b- Number of digits
+// b- Number of digits
+	
 	case 2:
       	cout << "The number of digits in " << originalNumber << " is " << i << endl;
         break;
-	// c- Product of even digits
+        
+// c- Product of even digits
+
 	case 3:
-	cout << "The product of even digits in " << originalNumber << " is " << product << endl;
-  break;
-	// d- First and last digits
+	     cout << "The product of even digits in " << originalNumber << " is " << product << endl;
+         break;
+         
+// d- First and last digits
+	
 	case 4:
-	cout << "The first digit of " << originalNumber << " is " << firstnumber
-	     << " and its last digit is " << lastDigit
-	     << " and their sum is " << firstnumber + lastDigit << endl;
-  break;
-	// e- Swapped number
+      	 cout << "The first digit of " << originalNumber << " is " << firstnumber
+	          << " and its last digit is " << lastDigit
+	          << " and their sum is " << firstnumber + lastDigit << endl;
+         break;
+         
+// e- Swapped number
+
 	case 5:
-	cout << "The new number of " << originalNumber << " after its first and last digits are swapped is " << swappednumber << endl;
-  break;
-	// f- Palindrome check
+	     cout << "The new number of " << originalNumber << " after its first and last digits are swapped is " << swappednumber << endl;
+         break;
+         
+// f- Palindrome check
+
 	case 6:  {
 	    if (originalNumber == reverse) {
-		cout << originalNumber << " is a palindrome." << endl;
-	} else {
-		cout << originalNumber << " is not a palindrome." << endl;
-	}
-	}
+		   cout << originalNumber << " is a palindrome." << endl;
+    	} else {
+		      cout << originalNumber << " is not a palindrome." << endl;
+        	}
+    	}
 	break;
 
-	// g- Digit Frequency Table
+// g- Digit Frequency Table
+
 	case 7: {
-	cout << "\nDigit Frequency Table:" << endl;
-	cout << "Digit\tFrequency" << endl;
-	for (int d = 0; d < 10; d++) {
-		if (digitFrequency[d] > 0) {
-			cout << d << "\t" << digitFrequency[d] << endl;
-		}
-	}}
-	break;
-
-	// h- Strong number check
-	case 8: {
-	if (sum == originalNumber) {
-		cout << originalNumber << " is a strong number because " << sum << " is equal to it." << endl;
-	} else {
-		cout << originalNumber << " is not a strong number because " << sum << " is not equal to it." << endl;
-	}
-	}
-	break;
-//j - Check whether a number is Perfect number or not.
-case 9: {
-	int divisorSum = 0;
-	for (int i = 1; i <= originalNumber / 2; i++) {
-		if (originalNumber % i == 0) {
-			divisorSum += i;
-		}
-	}
-
-	if (divisorSum == originalNumber) {
-		cout << originalNumber << " is a perfect number." << endl;
-	} else {
-		cout << originalNumber << " is not a perfect number." << endl;
-	}}
+      	cout << "\nDigit Frequency Table:" << endl;
+    	cout << "Digit\tFrequency" << endl;
+    	
+    	for (int d = 0; d < 10; d++) {
+		   if (digitFrequency[d] > 0) {
+			   cout << d << "\t" << digitFrequency[d] << endl;
+		       }
+     	  }
+	    
+	   }
 	break;
 	
-	 default:
-                cout << "Invalid choice! Please try again." << endl;
-        }
-    } while (choice != 10);
+// h- Strong number check
 
+	case 8: {
+     	if (sum == originalNumber) {
+	    	cout << originalNumber << " is a strong number because " << sum << " is equal to it." << endl;
+    	} else {
+		      cout << originalNumber << " is not a strong number because " << sum << " is not equal to it." << endl;
+	          }
+    	}
+	     break;
+	     
+//j - Check whether a number is Perfect number or not.
+
+    case 9: {
+         	int divisorSum = 0;
+	       for (int i = 1; i <= originalNumber / 2; i++) {
+		      if (originalNumber % i == 0) {
+		        divisorSum += i;
+		       } 
+    	     }
+
+        	if (divisorSum == originalNumber) {
+	        	cout << originalNumber << " is a perfect number." << endl;
+        	} else {
+		         cout << originalNumber << " is not a perfect number." << endl;
+             	}
+        
+             }
+        	break;
+	
+	 default:
+              cout << "Invalid choice! Please try again." << endl;
+      }
+  }
 	return 0;
 }
