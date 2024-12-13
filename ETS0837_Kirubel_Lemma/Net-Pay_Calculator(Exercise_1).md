@@ -21,7 +21,7 @@
 *Output*: net_salary (float), gross_salary (float), bonus(float), pension (flaot), tax (float)  
 *Process*:
 - input basic_salary and worked_hours
-- if worked_hours > 40, input bonus_rate and calculate bonus as bonus_rate * (working_hours - 40)
+- if worked_hours > 40, input bonus_rate and calculate bonus as bonus_rate * (worked_hours - 40)
 - else if worked_hours <= 40 set bonus to 0
 - calculate gross_salary as basic_salary + bonus
 - calculate pension as basic_salary * 0.07
