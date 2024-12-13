@@ -1,3 +1,14 @@
+<h2>Number Checker With Menu</h2>
+<h3>Problem</h3>
+Write a program that accepts an integer from the user and perform the following. Once you complete solving all the exercises compile it and prepare a menu.
+
+<h3>Problem Analysis</h3>
+<strong>Input</strong> - <br>
+number & choice <br>
+<strong>Output</strong> - Number's character depending on character to check was chosen<br>
+<strong>Process</strong> - <br>
+Accepting inputs <br>
+Checking value of choice to know what character is wanted to be checked <br>
 Start
 Declare Variables
 row: integer to represent the current row.
