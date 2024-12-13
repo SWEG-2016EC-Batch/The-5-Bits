@@ -17,17 +17,17 @@ int main () {
         cout << "Invalid input" << endl;
         goto a;    
     } else if (basic_salary > 0 && basic_salary <= 200) {
-        income_tax_rate == 0;
+        income_tax_rate = 0;
     } else if (basic_salary > 200 && basic_salary <= 600) {
-        income_tax_rate == 0.1;
+        income_tax_rate = 0.1;
     } else if (basic_salary > 600 && basic_salary <= 1200) {
-        income_tax_rate == 0.15;
+        income_tax_rate = 0.15;
     } else if (basic_salary > 1200 && basic_salary <= 2000) {
-        income_tax_rate == 0.20;
+        income_tax_rate = 0.20;
     } else if (basic_salary > 2000 && basic_salary <= 3500) {
-        income_tax_rate == 0.25;
+        income_tax_rate = 0.25;
     } else {
-        income_tax_rate == 0.3;
+        income_tax_rate = 0.3;
     }
 
     cout << "Please enter how many hours you have worked" << endl;
@@ -38,7 +38,7 @@ int main () {
         cin >> bouns_rate;
         bouns = (working_hours - 40) * bouns_rate;
     } else {
-        bouns == 0;
+        bouns = 0;
     }
 
     gross_salary = basic_salary + bouns;
