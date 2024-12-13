@@ -16,3 +16,5 @@ calculating sum of these results <br>
 checking the value of GPA by checking where the sum reside with in a range of numbers <br>
 
 <h3>Pseudocode</h3>
+1. start
+2. 
