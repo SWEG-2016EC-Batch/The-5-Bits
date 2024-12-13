@@ -10,7 +10,8 @@ prompts the user to enter an over-time bonus rate/hour.
 
 **Output** = base salary, bonus payment, overtime payment, gross salary , pension, tax, net salary
 
-**Process** = calculate 
+**Process** = calculate
+
                > bonus payment = worked hour * bonus rate
 
                > overtime payment = worked hour * overtime rate
