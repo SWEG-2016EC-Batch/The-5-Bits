@@ -11,7 +11,9 @@ int main () {
     cout << "Please enter your basic salary" << endl;
     cin >> basic_salary;
 
-    if (basic_salary < 0) {
+    if ((cin.fail()) || (basic_salary < 0)) {
+        cin.clear();
+        cin.ignore();
         cout << "Invalid input" << endl;
         goto a;    
     } else if (basic_salary > 0 && basic_salary <= 200) {
@@ -41,7 +43,7 @@ int main () {
 
     gross_salary = basic_salary + bouns;
     pension = basic_salary * pension_rate;
-    income_tax = gross_salary * income_tax_rate;
+    income_tax = (gross_salary / basic_salary) * income_tax_rate;
     net_salary = gross_salary - (pension + income_tax);
 
     cout << "Your net salary is: " << net_salary;
