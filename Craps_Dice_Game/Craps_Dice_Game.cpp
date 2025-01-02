@@ -7,19 +7,24 @@ int main() {
   int roll[2], sum1, sum2, point,won = 0,lost = 0;
         cout<< "\tCraps Dice Game\n";
 
-      string dice[6] = { "┌─────────┐\n│         │\n│    •    │\n│         │\n└─────────┘",
-                         "┌─────────┐\n│•        │\n│         │\n│        •│\n└─────────┘",
-                         "┌─────────┐\n│•        │\n│    •    │\n│        •│\n└─────────┘",
-                         "┌─────────┐\n│•       •│\n│         │\n│•       •│\n└─────────┘",
-                         "┌─────────┐\n│•       •│\n│    •    │\n│•       •│\n└─────────┘",
-                         "┌─────────┐\n│•       •│\n│•       •│\n│•       •│\n└─────────┘"};
+          string dice[6][5] = {
+                               {"┌─────────┐", "│         │", "│    •    │", "│         │", "└─────────┘"},  
+                               {"┌─────────┐", "│•        │", "│         │", "│        •│", "└─────────┘"},  
+                               {"┌─────────┐", "│•        │", "│    •    │", "│        •│", "└─────────┘"},  
+                               {"┌─────────┐", "│•       •│", "│         │", "│•       •│", "└─────────┘"},  
+                               {"┌─────────┐", "│•       •│", "│    •    │", "│•       •│", "└─────────┘"},  
+                               {"┌─────────┐", "│•       •│", "│•       •│", "│•       •│", "└─────────┘"}
+                            };
          srand(time(0)); 
         roll[0] = (rand() % 6) + 1;
         roll[1] = (rand() % 6) + 1;
         sum1 =  roll[0] + roll[1];
          
-        cout << dice[roll[0]-1] << " \n " << dice[roll[1]-1] << endl;
-        cout  << "You rolled: " << roll[0] << " +" <<roll[1] << " = " << sum1 << endl;
+        cout << "\nRolling the dice...\n";
+        for (int i = 0; i < 5; i++) {
+            cout << dice[roll[0] - 1][i] << "   " << dice[roll[1] - 1][i] << endl;
+        }         
+       cout  << "You rolled: " << roll[0] << " +" <<roll[1] << " = " << sum1 << endl;
  
         if (sum1 == 7 || sum1 == 11) {
             cout << "You win!\n";
@@ -35,8 +40,11 @@ int main() {
                roll[0] = (rand() % 6) + 1;
                roll[1] = (rand() % 6) + 1;
                 sum2 = roll[0] + roll[1]; 
-                cout << dice[roll[0]-1] << " \n " << dice[roll[1]-1] << endl;
-                cout << "You rolled: " << roll[0] << " + " << roll[1] << " = " << sum2 << endl;
+            cout << "\nRolling the dice...\n";
+        for (int i = 0; i < 5; i++) {
+            cout << dice[roll[0] - 1][i] << "   " << dice[roll[1] - 1][i] << endl;
+        }                 
+        cout << "You rolled: " << roll[0] << " + " << roll[1] << " = " << sum2 << endl;
         }
             if (sum2 == point) {
                 cout << "You made your point!\nYou win!" << endl;
