@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
  
-  int roll1, roll2, sum1, point,won = 0,lost = 0;
+  int roll1, roll2, sum1, sum2, point,won = 0,lost = 0;
         
         cout<< "\tCraps Dice Game\n";
          srand(time(0)); 
@@ -24,6 +24,16 @@ int main() {
             point = sum1;
             cout << "Your point is: " << point << endl;
         }
-
+ while (sum2 != point && sum2 != 7) {
+                roll1 = (rand() % 6) + 1;
+                roll2 = (rand() % 6) + 1;
+                sum2 = roll1 + roll2; 
+                cout << "You rolled: " << roll1 << " + " << roll2 << " = " << sum2 << endl;
+        }
+            if (sum2 == point) {
+                cout << "You made your point!\nYou win!" << endl;
+            } else {
+                cout << "You rolled a 7!\nYou lose!" << endl;
+            }
 return 0;
 }
