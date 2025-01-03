@@ -14,10 +14,10 @@ int main() {
         {"┌─────────┐", "│ •     • │", "│ •     • │", "│ •     • │", "└─────────┘"}
         };
 
-    cout<< "\tCraps Dice Game\n";
+    cout<< "\tCraps Dice Game";
 
     c:
-    cout << "\n1. Play again\n2. View history\n0. Exit\n";
+    cout << "\n1. Play\n2. View history\n0. Exit\n";
     cin >> menu;
     switch (menu) {
         case 1: goto a; break;
