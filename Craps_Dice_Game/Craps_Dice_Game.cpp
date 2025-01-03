@@ -5,10 +5,6 @@ using namespace std;
 
 int main() {
     int rounds = 0, won = 0, lost = 0, menu;
-    a:
-    int roll[2], sum1 = 0, sum2 = 0, point = 0;
-    cout<< "\tCraps Dice Game\n";
-
     string dice[6][5] = {
         {"┌─────────┐", "│         │", "│    •    │", "│         │", "└─────────┘"},  
         {"┌─────────┐", "│ •       │", "│         │", "│       • │", "└─────────┘"},  
@@ -17,6 +13,27 @@ int main() {
         {"┌─────────┐", "│ •     • │", "│    •    │", "│ •     • │", "└─────────┘"},  
         {"┌─────────┐", "│ •     • │", "│ •     • │", "│ •     • │", "└─────────┘"}
         };
+
+    cout<< "\tCraps Dice Game\n";
+
+    c:
+    cout << "\n1. Play again\n2. View history\n0. Exit\n";
+    cin >> menu;
+    switch (menu) {
+        case 1: goto a; break;
+        case 2: goto b; break;
+        case 0: return 0; break;
+        default: return 0; break;
+    }
+
+    b:
+    cout << "\nHistory\nRounds played: " << rounds << "\nRounds won: " << won << "\nRounds lost: " << lost << "\n" << endl;
+    sleep(2);
+    goto c;
+    
+    a:
+    int roll[2], sum1 = 0, sum2 = 0, point = 0;
+
     srand(time(0));
     roll[0] = (rand() % 6) + 1;
     roll[1] = (rand() % 6) + 1;
@@ -58,33 +75,6 @@ int main() {
             }
     }
     rounds++;
-    cout << "\n1. Play again\n2. View history\n0. Exit\n";
-    cin >> menu;
-    switch (menu) {
-        case 1:
-        goto a;
-        break;
-        case 2:
-        break;
-        case 0:
-        return 0;
-        break;
-        default:
-        return 0;
-        break;
-    }
-    cout << "\nHistory\nRounds played: " << rounds << "\nRounds won: " << won << "\nRounds lost: " << lost << "\n" << endl;
-    cout << "1. Play again\n0. Exit\n";
-    cin >> menu;
-    switch (menu) {
-        case 1:
-        goto a;
-        break;
-        case 0:
-        return 0;
-        break;
-        default:
-        return 0;
-        break;
-    }
+    sleep(2);
+    goto c;
 }
