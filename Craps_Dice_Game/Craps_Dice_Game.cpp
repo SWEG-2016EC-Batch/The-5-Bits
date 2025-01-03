@@ -27,7 +27,9 @@ int main() {
     }
 
     b:
-    cout << "\nHistory\nRounds played: " << rounds << "\nRounds won: " << won << "\nRounds lost: " << lost << "\n" << endl;
+    cout << "\n--------------------";
+    cout << "\nRounds played\t| " << rounds << "\nWon\t\t| " << won << "\nLost\t\t| " << lost; 
+    cout << "\n--------------------" << endl;
     sleep(2);
     goto c;
     
