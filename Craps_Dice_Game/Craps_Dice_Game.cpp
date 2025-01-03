@@ -1,5 +1,6 @@
 #include <iostream>
 #include <unistd.h>
+#include <conio.h>
 
 using namespace std;
 
@@ -8,7 +9,8 @@ int main() {
     a:
     int roll[2], sum1 = 0, sum2 = 0, point = 0;
     cout<< "\tCraps Dice Game\n";
-
+    cout<<"please press ENTER to start the game.";
+    getch();
     string dice[6][5] = {
         {"┌─────────┐", "│         │", "│    •    │", "│         │", "└─────────┘"},  
         {"┌─────────┐", "│ •       │", "│         │", "│       • │", "└─────────┘"},  
@@ -39,6 +41,8 @@ int main() {
         point = sum1;
         cout << "Your point is: " << point << endl;
         while (sum2 != point && sum2 != 7) {
+            cout<<"please press ENTER to roll again";
+            getch(); 
             roll[0] = (rand() % 6) + 1;
             roll[1] = (rand() % 6) + 1;
             sum2 = roll[0] + roll[1]; 
