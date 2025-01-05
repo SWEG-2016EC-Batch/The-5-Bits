@@ -1,4 +1,4 @@
-
+```mermaid
 
 flowchart TD
     start([Start]) --> mainMenu{Is menu option 1?}
