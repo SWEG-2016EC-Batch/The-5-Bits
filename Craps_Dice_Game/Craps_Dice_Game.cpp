@@ -3,45 +3,65 @@
 #include <string>
 #include <ctime>
 #include <cstdlib>
+#include <limits>
 
 using namespace std;
 
 int main() {
     //declare and initialize variables
-    string input;
+    string input,name;
+  
     int rounds = 0, won = 0, lost = 0, menu;
     string dice[6][5] ={
-        {"┌---------┐", "|         |", "|    *    |", "|         |", "└---------┘"},  
-        {"┌---------┐", "| *       |", "|         |", "|       * |", "└---------┘"},  
-        {"┌---------┐", "| *       |", "|    *    |", "|       * |", "└---------┘"},  
-        {"┌---------┐", "| *     * |", "|         |", "| *     * |", "└---------┘"},  
-        {"┌---------┐", "| *     * |", "|    *    |", "| *     * |", "└---------┘"},  
-        {"┌---------┐", "| *     * |", "| *     * |", "| *     * |", "└---------┘"}
+        {"+---------+", "|         |", "|    *    |", "|         |", "+---------+"},  
+        {"+---------+", "| *       |", "|         |", "|       * |", "+---------+"},  
+        {"+---------+", "| *       |", "|    *    |", "|       * |", "+---------+"},  
+        {"+---------+", "| *     * |", "|         |", "| *     * |", "+---------+"},  
+        {"+---------+", "| *     * |", "|    *    |", "| *     * |", "+---------+"},  
+        {"+---------+", "| *     * |", "| *     * |", "| *     * |", "+---------+"}
+    
     };
 
     //game title
-    cout<< "\tCraps Dice Game";
+    cout<< "\tCraps Dice Game"<<endl;
+    cout<<"\nPlease enter your name: ";
+    cin>>name;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cout<<"welcome "<<name<<" this is Crapes game what do you want to do? "<<endl;
 
     //menu
-    c:
-    cout << "\n1. Play\n2. View history\n0. Exit\n";
+    d:
+    cout << "\n1. Play\n2. View history\n3. Read how to play\n0. Exit\n";
     cin >> menu;
     system ("cls");
     switch (menu) {
         case 1: goto a; break;
         case 2: goto b; break;
+        case 3: goto c; break;
+
         case 0: return 0; break;
-        default: goto c; break;
+        default: goto d; break;
     }
 
+    c:
+    cout<<" To play the game follow the instructions the program prompts you to."
+          <<"You first have to roll two dice simultaneously by pressing the ENTER key when prompted."
+          <<"Then the rolls and thier sum will be displayed and whether you win , lose or persuaded to continue will be decided based on the sum."<<endl
+          <<" If you rolled a sum of 7 or 11 on your first roll,you will be the winner of the round; if you rolled a sum of 2, 3 0r 11"
+          <<", you will lose the round.Otherwise the sum will be set as your point and you will be given another chance to roll again and again"
+          <<" untill you will get the point that is set,which will make you the winner eventaully, or 7 that will make you lose the round. "<<endl
+          <<" \nWhat do you want to do next? "<<endl;
+         
+ goto d; 
     //history
     b:
-    cout << "\n--------------------";
-    cout << "\nRounds played\t| " << rounds << "\nWon\t\t| " << won << "\nLost\t\t| " << lost; 
-    cout << "\n--------------------" << endl;
+    cout<<"congratulations "<<name<<" this is your playing record!."<<endl
+        << "\n--------------------"
+        << "\nRounds played\t| " << rounds << "\nWon\t\t| " << won << "\nLost\t\t| " << lost
+        << "\n--------------------" << endl;
     sleep(2);
     //go back to the menu
-    goto c;
+    goto d;
 
     //game
     a:
@@ -54,6 +74,7 @@ int main() {
     //add dice rolls
     sum1 =  roll[0] + roll[1];
     //print dice as picture
+    cout << "Press ENTER to roll again";
     getline(cin,input);
     system ("cls");
     cout << "\nRolling the dice...\n";
@@ -112,5 +133,5 @@ int main() {
     rounds++;
     sleep(2);
     //go back to the menu
-    goto c;
+    goto d;
 }
