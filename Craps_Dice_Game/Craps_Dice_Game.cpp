@@ -29,7 +29,7 @@ int main() {
         case 1: goto a; break;
         case 2: goto b; break;
         case 0: return 0; break;
-        default: return 0; break;
+        default: goto c; break;
     }
 
     //history
