@@ -60,7 +60,7 @@ int main() {
         cout << dice[roll[0] - 1][i] << "   " << dice[roll[1] - 1][i] << endl;
     }
     //print dice as text
-    cout  << "You rolled: " << roll[0] << " +" <<roll[1] << " = " << sum1 << endl;
+    cout  << "You rolled: " << roll[0] << " + " <<roll[1] << " = " << sum1 << endl;
     //check sum against game rules
     if (sum1 == 7 || sum1 == 11) {
         cout << "You win!\n";
