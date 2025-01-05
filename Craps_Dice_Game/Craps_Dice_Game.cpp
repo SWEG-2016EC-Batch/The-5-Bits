@@ -1,9 +1,11 @@
 #include <iostream>
 #include <unistd.h>
+#include <string>
 
 using namespace std;
 
 int main() {
+    string input;
     int rounds = 0, won = 0, lost = 0, menu;
     string dice[6][5] = {
         {"┌─────────┐", "│         │", "│    •    │", "│         │", "└─────────┘"},  
@@ -19,6 +21,7 @@ int main() {
     c:
     cout << "\n1. Play\n2. View history\n0. Exit\n";
     cin >> menu;
+    system ("cls");
     switch (menu) {
         case 1: goto a; break;
         case 2: goto b; break;
@@ -40,7 +43,9 @@ int main() {
     roll[0] = (rand() % 6) + 1;
     roll[1] = (rand() % 6) + 1;
     sum1 =  roll[0] + roll[1];
-     
+
+    getline(cin,input);
+    system ("cls");
     cout << "\nRolling the dice...\n";
     sleep(1.5);
     for (int i = 0; i < 5; i++) {
@@ -57,7 +62,10 @@ int main() {
     } else {
         point = sum1;
         cout << "Your point is: " << point << endl;
-        while (sum2 != point && sum2 != 7) { 
+        while (sum2 != point && sum2 != 7) {
+            cout << "Press ENTER to roll again";
+            getline (cin,input);
+            system ("cls");
             roll[0] = (rand() % 6) + 1;
             roll[1] = (rand() % 6) + 1;
             sum2 = roll[0] + roll[1]; 
