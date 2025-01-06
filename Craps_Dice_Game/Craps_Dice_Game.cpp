@@ -22,19 +22,19 @@ int main() {
     //game title
     cout<< "\tCraps Dice Game";
     //menu
-    c:
+    d:
     cout << "\n1. Play\n2. View history\n3. How to play\n0. Exit\n";
     cin >> menu;
     system ("cls");
     switch (menu) {
         case 1: goto a; break;
         case 2: goto b; break;
-        case 3: goto d; break;
+        case 3: goto c; break;
         case 0: return 0; break;
-        default: goto c; break;
+        default: goto d; break;
     }
     //how to play
-    d:
+    c:
     cout<<" To play the game follow the instructions the program prompts you to."
           <<"You first have to roll two dice simultaneously by pressing the ENTER key when prompted."
           <<"Then the rolls and thier sum will be displayed and whether you win , lose or persuaded to continue will be decided based on the sum."<<endl
@@ -43,7 +43,7 @@ int main() {
           <<" untill you will get the point that is set,which will make you the winner eventaully, or 7 that will make you lose the round. "<<endl
           <<" \nWhat do you want to do next? "<<endl;
          
-    goto c; 
+    goto d; 
     //history
     b:
     cout << "\n--------------------";
@@ -51,7 +51,7 @@ int main() {
     cout << "\n--------------------" << endl;
     sleep(2);
     //go back to the menu
-    goto c;
+    goto d;
 
     //game
     a:
@@ -122,5 +122,5 @@ int main() {
     rounds++;
     sleep(2);
     //go back to the menu
-    goto c;
+    goto d;
 }
