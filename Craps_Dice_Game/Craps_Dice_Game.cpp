@@ -28,7 +28,7 @@ int main() {
     system ("cls");
     switch (menu) {
         case 1: goto a; break;
-        case 2: goto c; break;
+        case 2: goto b; break;
         case 3: goto d; break;
         case 0: return 0; break;
         default: goto c; break;
@@ -66,7 +66,7 @@ int main() {
     //print dice as picture
     getline(cin,input);
     system ("cls");
-    cout << "\nRolling the dice...\n";
+    cout << "Rolling the dice...\n";
     sleep(1.5);
     for (int i = 0; i < 5; i++) {
         cout << dice[roll[0] - 1][i] << "   " << dice[roll[1] - 1][i] << endl;
