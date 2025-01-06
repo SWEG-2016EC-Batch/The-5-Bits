@@ -24,22 +24,22 @@ flowchart TD
     
     playGame --> rollDice[Generate Random Numbers and Roll Dice]
     rollDice --> checkSum1{Sum == 7 or 11?}
-    checkSum1 -->|Yes| win1[/You Win! Increment Won/]
+    checkSum1 -->|Yes| win1[/You Win!/] --> incrementWon[Increment Won]
     checkSum1 -->|No| checkSum2{Sum == 2, 3, or 12?}
     
-    checkSum2 -->|Yes| lose1[/You Lose! Increment Lost/]
+    checkSum2 -->|Yes| lose1[/You Lose!/] --> incrementLost[Increment Lost]
     checkSum2 -->|No| setPoint[Set Point and Roll Again]
     
     setPoint --> rollAgain[Roll Dice Again]
     rollAgain --> checkPoint{Sum == Point or 7?}
     
-    checkPoint -->|Point| win2[/You Made Your Point, You Win! Increment Won/]
-    checkPoint -->|7| lose2[/You Rolled a 7, You Lose! Increment Lost/]
+    checkPoint -->|Point| win2[/You Made Your Point, You Win!/] --> incrementWon2[Increment Won]
+    checkPoint -->|7| lose2[/You Rolled a 7, You Lose!/] --> incrementLost2[Increment Lost]
     
-    win1 --> backToMenu3[/Go Back to Menu/]
-    lose1 --> backToMenu4[/Go Back to Menu/]
-    win2 --> backToMenu5[/Go Back to Menu/]
-    lose2 --> backToMenu5
+    incrementWon --> backToMenu3[/Go Back to Menu/]
+    incrementLost --> backToMenu4[/Go Back to Menu/]
+    incrementWon2 --> backToMenu5[/Go Back to Menu/]
+    incrementLost2 --> backToMenu5
     backToMenu3 --> menuOptions
     backToMenu4 --> menuOptions
     backToMenu5 --> menuOptions
