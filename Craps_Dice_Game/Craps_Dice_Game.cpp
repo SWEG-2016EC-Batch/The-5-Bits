@@ -35,13 +35,13 @@ int main() {
     }
     //how to play
     c:
-    cout<<" To play the game follow the instructions the program prompts you to."
-          <<"You first have to roll two dice simultaneously by pressing the ENTER key when prompted."
-          <<"Then the rolls and thier sum will be displayed and whether you win , lose or persuaded to continue will be decided based on the sum."<<endl
-          <<" If you rolled a sum of 7 or 11 on your first roll,you will be the winner of the round; if you rolled a sum of 2, 3 0r 11"
-          <<", you will lose the round.Otherwise the sum will be set as your point and you will be given another chance to roll again and again"
-          <<" untill you will get the point that is set,which will make you the winner eventaully, or 7 that will make you lose the round. "<<endl
-          <<" \nWhat do you want to do next? "<<endl;
+    cout << "To play the game follow the instructions the program prompts you to.\n"
+         << "You first have to roll two dice simultaneously by pressing the ENTER key when prompted.\n"
+         << "Then the rolls and thier sum will be displayed and whether you win, lose or continue rolling will be decided based on the sum.\n"<<endl
+         << "\tIf you rolled a sum of 7 or 11 on your first roll, you will be the winner of the round.\n\tIf you rolled a sum of 2, 3 or 11"
+         << ", you will lose the round.\n\tOtherwise the sum will be set as your point and you will be given another chance to roll again and again"
+         << " until you will get the point that is set, which will make you the winner eventaully, or 7 that will make you lose the round."<<endl
+         << "\nWhat do you want to do next?"<<endl;
          
     goto d; 
     //history
@@ -99,7 +99,7 @@ int main() {
             //add dice rolls
             sum2 = roll[0] + roll[1];
             //print dice as picture
-            cout << "\nRolling the dice...\n";
+            cout << "Rolling the dice...\n";
             sleep(1.5);
             for (int i = 0; i < 5; i++) {
                 cout << dice[roll[0] - 1][i] << "   " << dice[roll[1] - 1][i] << endl;
