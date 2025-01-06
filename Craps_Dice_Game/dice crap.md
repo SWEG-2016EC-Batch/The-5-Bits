@@ -1,8 +1,7 @@
 ```mermaid
 
-
 flowchart TD
-    start([Start]) --> title[/Display Game Title and Input Name/]
+    start((Start)) --> title[/Display Game Title and Input Name/]
     title --> menuOptions[/Display Menu Options/]
     
     menuOptions --> checkOption1{Option == 1?}
@@ -15,7 +14,7 @@ flowchart TD
     checkOption3 -->|Yes| howToPlay[/Read How to Play/]
     checkOption3 -->|No| checkOption4{Option == 0?}
     
-    checkOption4 -->|Yes| exit([Exit Program/])
+    checkOption4 -->|Yes| end((End))
     checkOption4 -->|No| invalidOption[/Invalid Option - Go Back to Menu/]
     
     howToPlay --> backToMenu1[/Go Back to Menu/]
@@ -30,7 +29,7 @@ flowchart TD
     checkSum1 -->|No| checkSum2{Sum == 2, 3, or 12?}
     
     checkSum2 -->|Yes| lose1[/You Lose!/]
-    checkSum2 -->|No| setPoint[/Set Point and Roll Again/]
+    checkSum2 -->|No| setPoint[Set Point and Roll Again]
     
     setPoint --> rollAgain[/Roll Dice Again/]
     rollAgain --> checkPoint{Sum == Point or 7?}
@@ -38,10 +37,10 @@ flowchart TD
     checkPoint -->|Point| win2[/You Made Your Point, You Win!/]
     checkPoint -->|7| lose2[/You Rolled a 7, You Lose!/]
     
-    win1 --> updateStats1[/Update Stats/]
-    lose1 --> updateStats2[/Update Stats/]
-    win2 --> updateStats3[/Update Stats/]
-    lose2 --> updateStats4[/Update Stats/]
+    win1 --> updateStats1[Update Stats]
+    lose1 --> updateStats2[Update Stats]
+    win2 --> updateStats3[Update Stats]
+    lose2 --> updateStats4[Update Stats]
     
     updateStats1 --> backToMenu3[/Go Back to Menu/]
     updateStats2 --> backToMenu4[/Go Back to Menu/]
@@ -52,5 +51,6 @@ flowchart TD
     backToMenu5 --> menuOptions
     
     invalidOption --> menuOptions
+
 ```
 
