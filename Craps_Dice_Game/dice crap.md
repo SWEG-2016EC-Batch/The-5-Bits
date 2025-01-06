@@ -13,7 +13,7 @@ flowchart TD
     checkOption3 -->|Yes| howToPlay[/Read How to Play/]
     checkOption3 -->|No| checkOption4{Option == 0?}
     
-    checkOption4 -->|Yes| end((End))
+    checkOption4 -->|Yes| finish((End))
     checkOption4 -->|No| invalidOption[/Invalid Option - Go Back to Menu/]
     
     howToPlay --> backToMenu1[/Go Back to Menu/]
@@ -50,6 +50,5 @@ flowchart TD
     backToMenu5 --> menuOptions
     
     invalidOption --> menuOptions
-
 ```
 
