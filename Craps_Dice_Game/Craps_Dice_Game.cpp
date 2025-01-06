@@ -22,7 +22,7 @@ int main() {
 
     //game title
     cout<< "\tCraps Dice Game";
-    // main menu
+    // menu
     d:
     cout << "\n1. Play\n2. View history\n3. How to play\n0. Exit\n";
     cin >> menu;
@@ -66,7 +66,7 @@ int main() {
     //add dice rolls
     sum1 =  roll[0] + roll[1];//calculate sum of the dice
     //print dice as picture
-    getline(cin,input);// wait for user to press ENTER to roll dice
+    getline(cin,input);
     system ("cls");
     cout << "Rolling the dice...\n";
     sleep(1.5);//waiting to print out the dice
