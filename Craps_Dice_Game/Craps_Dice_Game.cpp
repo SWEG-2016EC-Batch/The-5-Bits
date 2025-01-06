@@ -10,6 +10,7 @@ int main() {
     //declare and initialize variables
     string input;
     int rounds = 0, won = 0, lost = 0, menu;
+    // Array to hold the dice faces
     string dice[6][5] ={
         {"+---------+", "|         |", "|    *    |", "|         |", "+---------+"},  
         {"+---------+", "| *       |", "|         |", "|       * |", "+---------+"},  
@@ -21,11 +22,12 @@ int main() {
 
     //game title
     cout<< "\tCraps Dice Game";
-    //menu
+    // main menu
     d:
     cout << "\n1. Play\n2. View history\n3. How to play\n0. Exit\n";
     cin >> menu;
     system ("cls");
+    // handle menu options
     switch (menu) {
         case 1: goto a; break;
         case 2: goto b; break;
@@ -44,12 +46,12 @@ int main() {
          << "\nWhat do you want to do next?"<<endl;
          
     goto d; 
-    //history
+    //game history
     b:
     cout << "\n--------------------";
     cout << "\nRounds played\t| " << rounds << "\nWon\t\t| " << won << "\nLost\t\t| " << lost; 
     cout << "\n--------------------" << endl;
-    sleep(2);
+    sleep(2);//pause before returning to menu
     //go back to the menu
     goto d;
 
@@ -62,12 +64,13 @@ int main() {
     roll[0] = (rand() % 6) + 1;
     roll[1] = (rand() % 6) + 1;
     //add dice rolls
-    sum1 =  roll[0] + roll[1];
+    sum1 =  roll[0] + roll[1];//calculate sum of the dice
     //print dice as picture
-    getline(cin,input);
+    getline(cin,input);// wait for user to press ENTER to roll dice
     system ("cls");
     cout << "Rolling the dice...\n";
-    sleep(1.5);
+    sleep(1.5);//waiting to print out the dice
+    //display dice faces
     for (int i = 0; i < 5; i++) {
         cout << dice[roll[0] - 1][i] << "   " << dice[roll[1] - 1][i] << endl;
     }
@@ -83,7 +86,7 @@ int main() {
         //update number of rounds lost
         lost++;
     } else {
-        //store point
+        //if there is no immediate win , set the point and continue rolling
         point = sum1;
         //print point
         cout << "Your point is: " << point << endl;
@@ -93,7 +96,7 @@ int main() {
             cout << "Press ENTER to roll again";
             getline (cin,input);
             system ("cls");
-            //generate random numbers for dice rolls
+            //generate new random numbers for dice rolls
             roll[0] = (rand() % 6) + 1;
             roll[1] = (rand() % 6) + 1;
             //add dice rolls
