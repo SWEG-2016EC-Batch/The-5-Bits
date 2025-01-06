@@ -36,8 +36,8 @@ int main() {
     //how to play
     c:
     cout << "To play the game follow the instructions the program prompts you to.\n"
-         << "You first have to roll two dice simultaneously by pressing the ENTER key when prompted.\n"
-         << "Then the rolls and thier sum will be displayed and whether you win, lose or continue rolling will be decided based on the sum.\n"<<endl
+         << "You first have to roll two dice by pressing the ENTER key when prompted.\n"
+         << "Then the rolls and thier sum will be displayed and whether you win, lose or continue rolling will be decided based on the sum.\n"
          << "\tIf you rolled a sum of 7 or 11 on your first roll, you will be the winner of the round.\n\tIf you rolled a sum of 2, 3 or 11"
          << ", you will lose the round.\n\tOtherwise the sum will be set as your point and you will be given another chance to roll again and again"
          << " until you will get the point that is set, which will make you the winner eventaully, or 7 that will make you lose the round."<<endl
