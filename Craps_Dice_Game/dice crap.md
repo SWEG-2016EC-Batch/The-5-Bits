@@ -4,7 +4,7 @@ flowchart TD
     title --> menuOptions[/Display Menu Options/]
     
     menuOptions --> checkOption1{Option == 1?}
-    checkOption1 -->|Yes| playGame[/Play the Game/]
+    checkOption1 -->|Yes| playGame[Play the Game]
     checkOption1 -->|No| checkOption2{Option == 2?}
     
     checkOption2 -->|Yes| viewHistory[/View History/]
@@ -22,7 +22,7 @@ flowchart TD
     viewHistory --> backToMenu2[/Go Back to Menu/]
     backToMenu2 --> menuOptions
     
-    playGame --> rollDice[/Generate Random Numbers and Roll Dice/]
+    playGame --> rollDice[Generate Random Numbers and Roll Dice]
     rollDice --> checkSum1{Sum == 7 or 11?}
     checkSum1 -->|Yes| win1[/You Win!/]
     checkSum1 -->|No| checkSum2{Sum == 2, 3, or 12?}
@@ -30,7 +30,7 @@ flowchart TD
     checkSum2 -->|Yes| lose1[/You Lose!/]
     checkSum2 -->|No| setPoint[Set Point and Roll Again]
     
-    setPoint --> rollAgain[/Roll Dice Again/]
+    setPoint --> rollAgain[Roll Dice Again]
     rollAgain --> checkPoint{Sum == Point or 7?}
     
     checkPoint -->|Point| win2[/You Made Your Point, You Win!/]
