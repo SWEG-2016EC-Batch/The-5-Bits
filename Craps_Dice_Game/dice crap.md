@@ -1,5 +1,4 @@
 ```mermaid
-
 flowchart TD
     start((Start)) --> title[/Display Game Title and Input Name/]
     title --> menuOptions[/Display Menu Options/]
